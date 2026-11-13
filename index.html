@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ella Grace &amp; Thomas · Whitefish, Montana</title>
+<meta name="description" content="Ella Grace Hattendorf & Thomas Markwalter · September 18, 2027 · Whitefish, Montana">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Ella Grace &amp; Thomas · September 18, 2027">
+<meta property="og:description" content="Join us for a weekend of celebration in Whitefish, Montana.">
+<meta property="og:image" content="https://tmmarkwalter-lab.github.io/wedding-draft/assets/images/hero-watercolor.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/images/logo-et.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --logo:#3F2610; --darkchoc:#2B1810; --navy:#1E2A3A; --deepblue:#2B4058; --forest:#2F3E2E; --choc:#3A2417; --choc-dk:#24160E;
+  --saddle:#7A4E2D; --orange:#B4572B; --tan:#C8AC86; --burgundy:#5C1E26; --red:#7A2522;
+  --cream:#F4EEE3; --paper:#EFE6D6; --ink:#2A1C14; --muted:#6E5A4A;
+  --script:'Pinyon Script', cursive; --serif:'Cormorant Garamond', Georgia, serif; --caps:'Cinzel', Georgia, serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:20px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.caps{font-family:var(--caps);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem}
+.wrap{max-width:860px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+/* ---------- Brand-iron intro (ET logo) ---------- */
+#brand{position:fixed;inset:0;z-index:100;background:var(--cream);display:grid;place-items:center;cursor:pointer;transition:opacity .9s ease, visibility .9s}
+#brand.done{opacity:0;visibility:hidden}
+.brand-glow{filter:drop-shadow(0 0 8px #ff8a24) drop-shadow(0 0 22px #ff6a00);animation:coolglow 1.9s .55s forwards}
+.brand-logo{width:min(30vw,150px);aspect-ratio:690/1106;background:#ffb347;
+  -webkit-mask:url(assets/images/logo-et.png) center/contain no-repeat;mask:url(assets/images/logo-et.png) center/contain no-repeat;
+  animation:stamp .5s cubic-bezier(.2,.9,.3,1.3) both, coolink 1.9s .55s forwards}
+#brand .hint{position:absolute;bottom:32px;color:var(--saddle);font-size:.65rem;opacity:.7}
+.smoke{position:absolute;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle,rgba(110,90,74,.28),transparent 70%);animation:smoke 2.4s .6s ease-out forwards;opacity:0}
+@keyframes stamp{from{transform:scale(1.35);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes coolink{60%{background:#7a3a14}to{background:#3F2610}}
+@keyframes coolglow{to{filter:drop-shadow(0 0 0 rgba(255,106,0,0))}}
+@keyframes smoke{0%{opacity:0;transform:translateY(0) scale(.6)}30%{opacity:1}100%{opacity:0;transform:translateY(-140px) scale(2.2)}}
+
+/* ---------- Nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:center;gap:clamp(14px,3vw,38px);padding:18px 16px;transition:background .4s, box-shadow .4s, color .4s;color:var(--choc)}
+nav a{text-decoration:none;font-family:var(--caps);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;opacity:.9;position:relative}
+nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:currentColor;transition:right .3s}
+nav a:hover::after{right:0}
+nav.solid{background:rgba(244,238,227,.94);color:var(--choc);box-shadow:0 1px 0 rgba(58,36,23,.15);backdrop-filter:blur(6px)}
+@media (max-width:620px){nav{gap:12px;padding:14px 8px}nav a{font-size:.56rem;letter-spacing:.14em}}
+
+/* ---------- Hero / watercolor (scrolls into view, not mirrored) ---------- */
+.hero{position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 70% 40% at 72% 4%, rgba(120,152,190,.22), transparent 70%),
+    radial-gradient(ellipse 60% 35% at 18% 10%, rgba(159,179,196,.18), transparent 70%),
+    var(--cream)}
+.title{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--choc);padding:clamp(74px,11vh,130px) 20px 0;will-change:transform,opacity;
+  text-shadow:0 0 22px rgba(244,238,227,.95),0 0 8px rgba(244,238,227,.9),0 0 2px rgba(244,238,227,.9)}
+.title .pre{font-size:.7rem;letter-spacing:.42em;margin-bottom:10px;color:var(--saddle)}
+.title h1{font-family:var(--script);font-weight:400;font-size:clamp(3.2rem,8.4vw,7.2rem);line-height:1.02;color:var(--choc)}
+.title h1 .and{display:block;font-family:var(--caps);font-size:.16em;letter-spacing:.5em;margin:.4em 0 .2em;color:var(--saddle)}
+.title .date{margin-top:20px;font-family:var(--caps);font-weight:600;letter-spacing:.38em;font-size:clamp(.7rem,1.6vw,.95rem);color:var(--navy)}
+.land{position:relative;z-index:1;width:100%;aspect-ratio:1022/760;margin-top:calc(-1 * clamp(30px,9vw,170px));mix-blend-mode:multiply;overflow:hidden}
+.land img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;transform-origin:50% 100%;will-change:transform}
+@media (max-aspect-ratio:1/1){.land{aspect-ratio:auto;height:80vh;height:72svh;margin-top:-12vh}}
+.cue{position:absolute;top:calc(100vh - 92px);top:calc(100svh - 92px);left:50%;transform:translateX(-50%);color:var(--cream);text-align:center;font-size:.58rem;z-index:5;text-shadow:0 1px 6px rgba(42,28,20,.7)}
+.cue span{display:block;width:1px;height:42px;margin:10px auto 0;background:linear-gradient(var(--cream),transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- Thin chocolate border ---------- */
+.blanket{height:3px;background:var(--choc)}
+
+/* ---------- River (fly line zone) ---------- */
+.river{position:relative}
+#flyline{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+#linepath,#castline{fill:none;stroke:var(--orange);stroke-width:2.2;stroke-linecap:round}
+#linepath{opacity:0;transition:opacity .3s}
+#flyline.cast-done #linepath{opacity:1}
+#flyline.cast-done #castline{opacity:0}
+#fisher{pointer-events:auto;cursor:pointer}
+#trout{opacity:0;transition:opacity .9s ease .35s}
+#flyline.cast-done #trout{opacity:1}
+.trout-tail{transform-box:fill-box;transform-origin:100% 50%;animation:swish .42s ease-in-out infinite alternate}
+.trout-body{transform-box:fill-box;transform-origin:50% 50%;animation:sway .84s ease-in-out infinite alternate}
+#trout.hooked .trout-tail{animation-duration:.2s}
+@keyframes swish{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
+@keyframes sway{from{transform:rotate(-2.5deg)}to{transform:rotate(2.5deg)}}
+@media (prefers-reduced-motion:reduce){.trout-tail,.trout-body{animation:none}}
+#fisher:hover #fisherBody{opacity:.85}
+.rip{fill:none;stroke:var(--deepblue);stroke-width:1.2;transform-box:fill-box;transform-origin:center;animation:rip 1.8s ease-out forwards}
+@keyframes rip{from{transform:scale(.2);opacity:.9}to{transform:scale(2.6);opacity:0}}
+.rip-still{fill:none;stroke:var(--deepblue);stroke-width:1;opacity:.35}
+#fly{transition:opacity .3s}
+section{position:relative;padding:130px 0}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--saddle);margin-bottom:18px}
+.eyebrow::before,.eyebrow::after{content:"";width:38px;height:1px;background:currentColor;opacity:.6}
+h2{font-family:var(--script);font-weight:400;font-size:clamp(2.8rem,6vw,4.4rem);line-height:1.1;text-align:center;color:var(--choc);margin-bottom:28px}
+.lede{text-align:center;max-width:640px;margin:0 auto;color:var(--ink);font-size:1.12rem}
+.sig{text-align:center;margin-top:26px;font-style:italic;color:var(--muted)}
+.sig b{display:block;font-family:var(--script);font-weight:400;font-style:normal;font-size:2.2rem;color:var(--choc);line-height:1.3}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- Countdown ---------- */
+.count{display:flex;justify-content:center;gap:clamp(10px,2.4vw,24px);margin-top:56px;flex-wrap:wrap}
+.tag{width:clamp(78px,15vw,124px);padding:22px 8px 16px;text-align:center;background:var(--darkchoc);color:var(--cream);border-radius:6px 6px 14px 14px;position:relative;box-shadow:inset 0 0 0 3px var(--darkchoc),inset 0 0 0 4px rgba(200,172,134,.55),0 10px 24px -14px rgba(36,22,14,.8)}
+.tag::before{content:"";position:absolute;top:9px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--cream);box-shadow:inset 0 0 0 2px var(--tan)}
+.tag b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.6vw,3rem);line-height:1.1;font-variant-numeric:tabular-nums;margin-top:6px}
+.tag small{font-family:var(--caps);font-size:.56rem;letter-spacing:.24em;color:var(--tan)}
+.count-note{text-align:center;margin-top:18px;color:var(--muted);font-style:italic;font-size:1rem}
+
+/* ---------- Photo reel (horizontal scroll) ---------- */
+.reel{position:relative;z-index:3;background:var(--choc)}
+.reel-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
+.reel-track{display:flex;flex:0 0 auto;margin:0 auto;gap:clamp(18px,3vw,40px);padding:0 max(24px,6vw);will-change:transform;align-items:center}
+.frame{flex:0 0 auto;height:min(68vh,620px,112vw);aspect-ratio:3/4;background:var(--cream);padding:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);position:relative}
+.frame:nth-child(odd){transform:rotate(-1.6deg)}
+.frame:nth-child(even){transform:rotate(1.4deg)}
+.frame img{width:100%;height:100%;object-fit:cover;background:var(--tan)}
+.reel-label{position:absolute;top:84px;left:0;right:0;text-align:center;color:var(--tan);z-index:2}
+.reel-progress.off{display:none}
+.reel-progress{position:absolute;bottom:40px;left:50%;width:160px;height:1px;margin-left:-80px;background:rgba(200,172,134,.3)}
+.reel-progress i{position:absolute;inset:0;background:var(--tan);transform-origin:left;transform:scaleX(0)}
+
+/* ---------- Weekend trail ---------- */
+.trail{position:relative;max-width:980px;margin:60px auto 0;padding:0 28px;z-index:2}
+.event{position:relative;width:calc(50% - 60px);background:var(--cream);border:1px solid rgba(58,36,23,.18);box-shadow:0 18px 40px -28px rgba(36,22,14,.55)}
+.event:nth-of-type(even){margin-left:auto}
+.event + .prints{margin:-10px 0}
+.event .band{height:96px;position:relative;display:flex;align-items:flex-end;padding:0 26px 14px;color:var(--cream)}
+.event .band .caps{background:rgba(0,0,0,.28);padding:5px 10px;font-size:.6rem}
+.pat-ticking{background:repeating-linear-gradient(90deg,var(--navy) 0 14px,#e9e0cf 14px 16px,var(--navy) 16px 20px,#e9e0cf 20px 22px)}
+.pat-foulard{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Crect width='30' height='30' fill='%232B4058'/%3E%3Cpath d='M15 8.5 L20.5 15 L15 21.5 L9.5 15Z' fill='%23C8AC86'/%3E%3Cpath d='M15 11.5 L17.8 15 L15 18.5 L12.2 15Z' fill='%232B4058'/%3E%3Ccircle cx='15' cy='15' r='1.4' fill='%23F4EEE3'/%3E%3Cg fill='%237A2522'%3E%3Ccircle cx='0' cy='0' r='2'/%3E%3Ccircle cx='30' cy='0' r='2'/%3E%3Ccircle cx='0' cy='30' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3Cg fill='%23C8AC86' opacity='.55'%3E%3Ccircle cx='15' cy='0.8' r='.8'/%3E%3Ccircle cx='15' cy='29.2' r='.8'/%3E%3Ccircle cx='0.8' cy='15' r='.8'/%3E%3Ccircle cx='29.2' cy='15' r='.8'/%3E%3C/g%3E%3C/svg%3E") 0 0/30px 30px,#2B4058}
+.pat-plaid{background:
+  repeating-linear-gradient(90deg,rgba(180,87,43,.55) 0 4px,transparent 4px 34px,rgba(30,42,58,.6) 34px 44px,transparent 44px 70px),
+  repeating-linear-gradient(0deg,rgba(180,87,43,.55) 0 4px,transparent 4px 34px,rgba(30,42,58,.6) 34px 44px,transparent 44px 70px),
+  var(--burgundy)}
+.event .body{padding:26px 28px 30px}
+.event .day{font-family:var(--caps);font-size:.66rem;letter-spacing:.24em;color:var(--orange)}
+.event h3{font-family:var(--script);font-weight:400;font-size:2.6rem;line-height:1.1;color:var(--choc);margin:6px 0 2px}
+.event .sub{font-style:italic;color:var(--muted);margin-bottom:12px}
+.event .meta{font-family:var(--caps);font-size:.62rem;letter-spacing:.16em;color:var(--saddle);border-top:1px solid rgba(58,36,23,.15);border-bottom:1px solid rgba(58,36,23,.15);padding:10px 0;margin:14px 0;display:flex;flex-wrap:wrap;gap:6px 18px}
+.event p{font-size:1.02rem}
+.event details{margin-top:12px}
+.event summary{cursor:pointer;font-family:var(--caps);font-size:.62rem;letter-spacing:.2em;color:var(--orange);list-style:none}
+.event summary::before{content:"+ "}
+.event details[open] summary::before{content:"– "}
+.event details p{margin-top:10px}
+.lock{display:inline-flex;align-items:center;gap:6px;font-style:italic;color:var(--muted);font-size:.95rem}
+.prints{position:relative;height:160px;z-index:2}
+.prints svg{position:absolute;width:30px;height:37px;opacity:0;transition:opacity .35s ease;fill:var(--saddle)}
+.prints svg.on{opacity:.85}
+@media (max-width:760px){
+  .event{width:100%}
+  .prints{height:120px}
+}
+
+/* ---------- Map ---------- */
+.mapbox{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:start;margin-top:40px}
+.map{background:#F3ECDD;position:relative;box-shadow:0 22px 40px -30px rgba(36,22,14,.6);overflow:hidden}
+.map svg{width:100%;height:auto;display:block}
+.map .lbl{font-family:'Cinzel',serif;font-size:13px;font-weight:600;letter-spacing:.14em;fill:#3F2610;paint-order:stroke;stroke:#F3ECDD;stroke-width:4px;stroke-linejoin:round}
+.map .minor{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.14em;fill:#6E5A4A;paint-order:stroke;stroke:#F3ECDD;stroke-width:3px}
+.map .water{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:.06em;fill:#2B4058;paint-order:stroke;stroke:#F3ECDD;stroke-width:3px}
+.map .park{font-family:'Pinyon Script',cursive;font-size:30px;fill:#2F3E2E;paint-order:stroke;stroke:#F3ECDD;stroke-width:5px;stroke-linejoin:round}
+.pin{cursor:pointer;outline:none}
+.pin .pinbody{transform-box:fill-box;transform-origin:50% 100%;transition:transform .25s ease}
+.map:not(.in) .pinbody{opacity:0;transform:translateY(-26px)}
+.map.in .pinbody{animation:drop .7s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(-26px)}to{opacity:1;transform:none}}
+.pin .drop{fill:#3F2610;transition:fill .25s}
+.pin:hover .drop,.pin:focus .drop,.pin.active .drop{fill:#7A2522}
+.pin.active .pinbody,.pin:hover .pinbody{transform:scale(1.18)}
+.pin .ring{fill:none;stroke:#7A2522;stroke-width:1.4;opacity:0}
+.pin.active .ring{animation:ring 1.8s ease-out infinite}
+@keyframes ring{from{transform:scale(.5);opacity:.9}to{transform:scale(1.6);opacity:0}}
+.pin .ring{transform-box:fill-box;transform-origin:center}
+.mapinfo{background:var(--choc);color:var(--cream);padding:28px;min-height:100%}
+.mapinfo .caps{color:var(--tan)}
+.mapinfo h4{font-family:var(--script);font-weight:400;font-size:2.2rem;line-height:1.15;margin:8px 0 10px}
+.mapinfo p{font-size:1rem;color:#e9dcc8}
+.mapinfo .drive{margin-top:14px;font-family:var(--caps);font-size:.6rem;letter-spacing:.2em;color:var(--tan)}
+.travel-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.travel-notes div{border-top:2px solid var(--choc);padding-top:14px}
+.travel-notes h5{font-family:var(--caps);font-weight:500;font-size:.7rem;letter-spacing:.2em;color:var(--choc);margin-bottom:6px}
+.travel-notes p{font-size:.98rem;color:var(--muted)}
+@media (max-width:760px){.mapbox,.travel-notes{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:720px;margin:40px auto 0}
+.faq details{border-bottom:1px solid rgba(58,36,23,.2);padding:20px 4px;background:var(--cream)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-size:1.2rem;font-weight:500;color:var(--choc)}
+.faq summary::after{content:"+";font-family:var(--caps);color:var(--orange);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin-top:10px;color:var(--ink)}
+.todo{background:#f7dfb8;padding:0 5px;border-radius:3px;font-size:.85em;font-style:italic;color:var(--saddle)}
+
+/* ---------- RSVP ---------- */
+.rsvp{background:var(--navy);color:var(--cream);overflow:hidden}
+.rsvp h2{color:var(--cream)}
+.rsvp .eyebrow{color:var(--tan)}
+.rsvp-card{max-width:560px;margin:36px auto 0;background:rgba(244,238,227,.06);border:1px solid rgba(200,172,134,.4);padding:36px clamp(20px,5vw,44px);position:relative}
+.rsvp-card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(200,172,134,.18);pointer-events:none}
+.rsvp label{display:block;font-family:var(--caps);font-size:.62rem;letter-spacing:.22em;color:var(--tan);margin:18px 0 8px}
+.rsvp input[type=text],.rsvp select,.rsvp textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(200,172,134,.6);color:var(--cream);font-family:var(--serif);font-size:1.15rem;padding:8px 2px;outline:none}
+.rsvp select option{color:var(--ink)}
+.rsvp input:focus,.rsvp select:focus,.rsvp textarea:focus{border-bottom-color:var(--orange)}
+.choice{display:flex;gap:12px;flex-wrap:wrap}
+.choice label{margin:0;flex:1 1 140px;border:1px solid rgba(200,172,134,.5);padding:14px;text-align:center;cursor:pointer;color:var(--cream);transition:background .25s,border-color .25s}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice input:checked + span{color:var(--cream)}
+.choice label:has(input:checked){background:var(--orange);border-color:var(--orange)}
+.rsvp label.check{display:flex;gap:12px;align-items:flex-start;margin:18px 0 0;font-family:var(--serif);font-size:1.05rem;letter-spacing:0;text-transform:none;color:var(--cream);cursor:pointer}
+.check input{accent-color:var(--orange);width:18px;height:18px;margin-top:5px}
+.btn{display:inline-block;margin-top:28px;background:var(--cream);color:var(--logo);font-weight:600;border:0;padding:15px 34px;font-family:var(--caps);font-size:.7rem;letter-spacing:.26em;cursor:pointer;transition:background .25s, transform .2s}
+.btn:hover{background:var(--paper);box-shadow:0 0 0 1px var(--tan);transform:translateY(-1px)}
+.step{display:none}.step.show{display:block;animation:fade .6s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.preview-badge{position:absolute;top:-12px;right:18px;background:var(--tan);color:var(--choc);font-family:var(--caps);font-size:.55rem;letter-spacing:.2em;padding:4px 10px}
+.hooked{text-align:center}
+.hooked .big{font-family:var(--script);font-size:3.4rem;line-height:1.1}
+
+/* ---------- Footer ---------- */
+footer{background:var(--cream);color:var(--logo);text-align:center;padding:70px 20px 150px;position:relative;overflow:hidden}
+.trail-ground{position:absolute;left:0;right:0;bottom:22px;height:1px;background:rgba(63,38,16,.25)}
+.rider{position:absolute;bottom:22px;left:0;width:clamp(56px,4.6vw,74px);visibility:hidden;will-change:transform;pointer-events:none}
+.rider svg{display:block;width:100%;height:auto;overflow:visible}
+footer .footer-logo{width:58px;aspect-ratio:690/1106;margin:0 auto 20px;background:var(--logo);-webkit-mask:url(assets/images/logo-et.png) center/contain no-repeat;mask:url(assets/images/logo-et.png) center/contain no-repeat}
+footer .script{font-family:var(--script);font-size:2.2rem;color:var(--logo)}
+footer .caps{color:var(--logo);font-weight:600}
+
+.draft-pill{position:fixed;left:14px;bottom:14px;z-index:60;background:var(--choc);color:var(--tan);font-family:var(--caps);font-size:.55rem;letter-spacing:.2em;padding:7px 12px;border:1px solid rgba(200,172,134,.4)}
+
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  #brand{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- phones ---------- */
+@media (max-width:700px){
+  body{font-size:18px}
+  section{padding:96px 0}
+  .count{gap:8px}
+  .tag{width:calc(25% - 6px);max-width:92px;padding:20px 4px 12px}
+  .tag b{font-size:1.9rem}
+  .tag small{font-size:.5rem;letter-spacing:.16em}
+  .map .lbl{font-size:21px!important;stroke-width:6px}
+  .map .water{font-size:22px!important}
+  .map .park{font-size:29px!important}
+  .map .minor{display:none}
+  .pin .pinbody{scale:1.6}
+  .mapinfo{padding:22px}
+  .rsvp-card{padding:30px 20px}
+  .event .body{padding:22px 20px 24px}
+  .event h3{font-size:2.3rem}
+  .draft-pill{left:8px;bottom:8px}
+  #welcome{padding-top:190px}
+  .eyebrow{gap:10px;letter-spacing:.18em}
+  .eyebrow::before,.eyebrow::after{width:18px}
+}
+@media (max-width:380px){nav{gap:9px}nav a{font-size:.5rem;letter-spacing:.1em}}
+</style>
+</head>
+<body>
+
+<!-- Brand-iron intro -->
+<div id="brand" aria-hidden="true">
+  <div class="smoke" style="left:44%;top:40%"></div>
+  <div class="smoke" style="left:52%;top:44%;animation-delay:.8s"></div>
+  <div class="brand-glow"><div class="brand-logo"></div></div>
+  <div class="hint caps">tap to enter</div>
+</div>
+
+<nav id="nav">
+  <a href="#welcome">Welcome</a>
+  <a href="#weekend">The Weekend</a>
+  <a href="#travel">Travel</a>
+  <a href="#faq">FAQ</a>
+  <a href="#rsvp">RSVP</a>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="top">
+  <div class="title" id="title">
+    <div class="pre caps">Under the Big Sky</div>
+    <h1>Ella Grace<span class="and">and</span>Thomas</h1>
+    <div class="date">9 · 18 · 2027 &nbsp;—&nbsp; Whitefish, Montana</div>
+  </div>
+  <div class="land" id="land"><img src="assets/images/hero-watercolor.jpg" alt="Watercolor of the mountains, pines, and meadow near Whitefish"></div>
+  <div class="cue caps" id="cue">Scroll<span></span></div>
+</header>
+
+<div class="blanket"></div>
+
+<div class="river" id="river">
+  <svg id="flyline" aria-hidden="true">
+    <g id="fisher" role="button" aria-label="Fly fisherman, click to cast again">
+      <g id="fisherBody" fill="#2B1810">
+        <path d="M-36 2 Q0 -5 36 2 L36 6 L-36 6Z" fill="#7A4E2D" opacity=".3"/>
+        <path d="M-27 2 l-3 -12 M-23 2 l1 -10 M-19 2 l-2 -7 M25 2 l3 -11 M29 2 l-2 -8" stroke="#2F3E2E" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <path d="M-10 -68 L10 -68 L9 -40 L11 -5 L17 -1 L17 1 L4 1 L3 -38 L-1 -38 L-4 -5 L0 -1 L0 1 L-12 1 L-11 -40Z"/>
+        <path d="M-11 -104 Q0 -109 11 -104 L12 -68 L-12 -68Z"/>
+        <rect x="-12" y="-73" width="24" height="3" fill="#C8AC86"/>
+        <circle cx="1" cy="-113" r="7.5"/>
+        <path d="M-15 -119 Q1 -124 17 -119 Q1 -115 -15 -119Z"/>
+        <path d="M-7 -120 Q-6 -131 1 -131 Q8 -131 8 -120Z"/>
+        <path d="M-6 -100 Q-15 -88 -6 -80" stroke="#2B1810" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M6 -101 Q17 -97 16 -84" stroke="#2B1810" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M-10 -98 L-19 -82" stroke="#2B1810" stroke-width="1.6" fill="none"/>
+        <ellipse cx="-21" cy="-75" rx="5" ry="7.5" fill="rgba(43,24,16,.12)" stroke="#2B1810" stroke-width="1.4"/>
+      </g>
+    </g>
+    <line id="rod" stroke="#2B1810" stroke-width="2.4" stroke-linecap="round"/>
+    <circle id="fishreel" r="3.2" fill="#C8AC86" stroke="#2B1810" stroke-width="1.2"/>
+    <g id="ripples"></g>
+    <path id="castline" d=""/>
+    <defs>
+      <linearGradient id="troutSkin" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4b5a2a"/><stop offset=".38" stop-color="#8d8f45"/>
+        <stop offset=".62" stop-color="#d4b263"/><stop offset="1" stop-color="#efe1b4"/>
+      </linearGradient>
+    </defs>
+    <path id="linepath" d=""/>
+    <g id="trout" aria-hidden="true"><g id="troutFlip"><g class="trout-body">
+      <path class="trout-tail" d="M-24 0 C-28 -3 -33 -9 -38 -11 Q-34 0 -38 11 C-33 9 -28 3 -24 0Z" fill="#5d6a33"/>
+      <path d="M2 -9.6 Q-4 -17 -11 -8.6Z" fill="#56622e"/>
+      <path d="M-15 -6.4 Q-18 -9.5 -20 -5.2Z" fill="#56622e"/>
+      <path d="M-8 8.8 Q-12 14 -15 7.6Z" fill="#c9a160"/>
+      <path d="M36 0 C30 -8 15 -11 1 -10 C-11 -9 -19 -6 -25 -2 L-25 2 C-19 6 -11 9 1 10 C15 11 30 8 36 0Z" fill="url(#troutSkin)"/>
+      <ellipse cx="2" cy="1.2" rx="22" ry="2.6" fill="#d9827a" opacity=".55"/>
+      <g fill="#1f1a12">
+        <circle cx="-20" cy="-2.5" r=".9"/><circle cx="-17" cy="1.5" r=".8"/><circle cx="-14" cy="-4.5" r=".9"/>
+        <circle cx="-11" cy="-1" r=".8"/><circle cx="-8" cy="-6" r=".8"/><circle cx="-6" cy="3" r=".7"/>
+        <circle cx="-3" cy="-3.5" r=".8"/><circle cx="1" cy="-7" r=".7"/><circle cx="4" cy="-2.5" r=".6"/>
+        <circle cx="9" cy="-6" r=".6"/><circle cx="14" cy="-7.5" r=".55"/><circle cx="-22" cy="4" r=".7"/>
+        <circle cx="-29" cy="-5" r=".7"/><circle cx="-31" cy="3" r=".7"/><circle cx="-33" cy="-1" r=".6"/>
+      </g>
+      <path d="M17 6.5 Q13 13 9 8.5Z" fill="#c9a160"/>
+      <path d="M24 -7 Q21.5 0 24 7" fill="none" stroke="rgba(30,25,15,.35)" stroke-width=".9"/>
+      <path d="M27.5 5.6 Q23 8.6 18 8" fill="none" stroke="#c0392b" stroke-width="2.1" stroke-linecap="round"/>
+      <path d="M35.6 .6 L30.5 2.2" stroke="rgba(30,25,15,.5)" stroke-width=".8"/>
+      <circle cx="29" cy="-2.6" r="1.7" fill="#1a140c"/><circle cx="29.5" cy="-3.1" r=".5" fill="#fff"/>
+    </g></g></g>
+    <g id="fly">
+      <!-- dry fly: tail, body, hackle, wing -->
+      <path d="M-16 0 L-8 -1 L-8 1Z" fill="#c8ac86"/>
+      <ellipse cx="0" cy="0" rx="8" ry="3.2" fill="#7a2522"/>
+      <path d="M6 -7 L6 7 M8 -6 L8 6 M4 -6 L4 6" stroke="#3a2417" stroke-width="1.2"/>
+      <path d="M5 -2 Q-2 -14 -9 -12 Q-2 -6 5 -2Z" fill="#e8dcc6" opacity=".9"/>
+    </g>
+  </svg>
+
+  <!-- Welcome -->
+  <section id="welcome">
+    <div class="wrap">
+      <div class="eyebrow caps rv">Welcome to our happy place</div>
+      <h2 class="rv">Meet us in Montana</h2>
+      <p class="lede rv">We are so excited to celebrate our wedding with you in one of our favorite places! Montana holds a special place in our hearts, and we can't imagine a more beautiful setting to begin this next chapter together. We're so grateful that our favorite people are traveling near and far to spend this weekend with us. We can't wait to make unforgettable memories with you under the Big Sky!</p>
+      <div class="sig rv">With love,<b>Ella Grace &amp; Thomas</b></div>
+      <div class="count rv" id="count">
+        <div class="tag"><b id="cd-d">—</b><small>Days</small></div>
+        <div class="tag"><b id="cd-h">—</b><small>Hours</small></div>
+        <div class="tag"><b id="cd-m">—</b><small>Minutes</small></div>
+        <div class="tag"><b id="cd-s">—</b><small>Seconds</small></div>
+      </div>
+      <p class="count-note rv">until we say “I do” in Whitefish</p>
+    </div>
+  </section>
+
+  <!-- Photo reel -->
+  <div class="reel" id="reel">
+    <div class="reel-pin">
+      <div class="reel-label caps">Fall in Whitefish</div>
+      <div class="reel-track" id="track">
+        <figure class="frame"><img loading="eager" decoding="async" alt="Ella Grace and Thomas by the lake in Whitefish" src="assets/images/engagement-1.jpg"></figure>
+        <figure class="frame"><img loading="eager" decoding="async" alt="Ella Grace and Thomas among the fall aspens" src="assets/images/engagement-2.jpg"></figure>
+        <figure class="frame"><img loading="eager" decoding="async" alt="Ella Grace and Thomas in Whitefish" src="assets/images/engagement-3.jpg"></figure>
+      </div>
+      <div class="reel-progress"><i id="reelbar"></i></div>
+    </div>
+  </div>
+
+  <!-- The Weekend -->
+  <section id="weekend">
+    <div class="wrap">
+      <div class="eyebrow caps rv">September 16 – 18, 2027</div>
+      <h2 class="rv">The Weekend Trail</h2>
+      <p class="lede rv">Three nights, one valley. Follow the horseshoe tracks.</p>
+    </div>
+    <div class="trail" id="trail">
+      <article class="event rv">
+        <div class="band pat-ticking"><span class="caps">Thursday Night</span></div>
+        <div class="body">
+          <div class="day">Thursday · September 16</div>
+          <h3>Welcome Party</h3>
+          <div class="sub">Kick up your boots &amp; raise a glass</div>
+          <div class="meta"><span>7 – 10 PM</span><span>Hattendorf Residence</span></div>
+          <p>Join us for cocktails, hors d'oeuvres, and a little Montana hospitality as we kick off the wedding weekend. We can't think of a better way to start than sharing our favorite place with our favorite people.</p>
+          <p class="lock" style="margin-top:12px">🔒 Address shared once you RSVP</p>
+        </div>
+      </article>
+      <div class="prints" data-dir="right"></div>
+      <article class="event rv">
+        <div class="band pat-foulard"><span class="caps">Friday Night</span></div>
+        <div class="body">
+          <div class="day">Friday · September 17</div>
+          <h3>The Post Toast</h3>
+          <div class="sub">After the rehearsal dinner, by the lake</div>
+          <div class="meta"><span>7:30 – 10 PM</span><span>The Lodge at Whitefish Lake</span></div>
+          <p>After the rehearsal dinner toasts, the party keeps going with live music, cocktails, and dancing by the lake, with the mountains in the background.</p>
+          <details><summary>Directions</summary><p>1380 Wisconsin Ave, Whitefish, MT 59937 · <a href="https://maps.google.com/?q=The+Lodge+at+Whitefish+Lake" target="_blank" rel="noopener">Open in Maps</a></p></details>
+        </div>
+      </article>
+      <div class="prints" data-dir="left"></div>
+      <article class="event rv">
+        <div class="band pat-plaid"><span class="caps">Saturday · The Big Day</span></div>
+        <div class="body">
+          <div class="day">Saturday · September 18</div>
+          <h3>The Wedding</h3>
+          <div class="sub">Under Montana's Big Sky</div>
+          <div class="meta"><span>5 – 11 PM</span><span>A Private Ranch</span><span>Formal Attire</span></div>
+          <p>Ceremony, dinner, and dancing until the stars come out. Shuttles will run from Whitefish to the ranch and back.</p>
+          <details><summary>Shuttles, footwear &amp; weather</summary>
+            <p><b>Shuttles</b> run on a set schedule, not continuously. Pickup spots and return times will be posted here closer to the weekend.</p>
+            <p><b>Footwear:</b> the ceremony and reception are both on grass, so plan your shoes accordingly.</p>
+            <p><b>Weather:</b> September evenings in Montana get cool. Bring a wrap or jacket.</p>
+          </details>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Travel -->
+  <section id="travel">
+    <div class="wrap" style="max-width:1080px">
+      <div class="eyebrow caps rv">Getting here &amp; getting around</div>
+      <h2 class="rv">The Flathead Valley</h2>
+      <p class="lede rv">Tap a pin to explore. We highly recommend renting a car so you can see as much of this place as you can.</p>
+      <div class="mapbox rv">
+        <div class="map" id="map">
+          <svg viewBox="0 0 800 720" id="mapsvg" role="img" aria-label="Painted map of Whitefish, Whitefish Lake, Whitefish Mountain, Glacier National Park and Kalispell">
+            <defs>
+              <filter id="wc" x="-15%" y="-15%" width="130%" height="130%">
+                <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+                <feGaussianBlur in="d" stdDeviation=".7"/>
+              </filter>
+              <filter id="wcEdge" x="-15%" y="-15%" width="130%" height="130%">
+                <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="1.3"/>
+              </filter>
+              <filter id="wash" x="-30%" y="-30%" width="160%" height="160%">
+                <feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="2" seed="9" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="40" xChannelSelector="R" yChannelSelector="G" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="14"/>
+              </filter>
+              <filter id="paper" x="0" y="0" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="2" result="g"/>
+                <feColorMatrix in="g" type="matrix" values="0 0 0 0 .45  0 0 0 0 .32  0 0 0 0 .2  0 0 0 .09 0"/>
+              </filter>
+              <linearGradient id="mtnL" x1="0" x2="1"><stop offset="0" stop-color="#9fb0a6"/><stop offset="1" stop-color="#b8c4b6"/></linearGradient>
+            </defs>
+
+            <!-- paper + soft washes -->
+            <rect width="800" height="720" fill="#F3ECDD"/>
+            <g filter="url(#wash)" opacity=".55">
+              <ellipse cx="300" cy="560" rx="170" ry="190" fill="#E6D3A8"/>
+              <ellipse cx="110" cy="380" rx="120" ry="300" fill="#B8C3A2"/>
+              <ellipse cx="290" cy="170" rx="170" ry="140" fill="#B5C1A0"/>
+              <ellipse cx="640" cy="560" rx="170" ry="150" fill="#B9C3A6"/>
+            </g>
+            <!-- Glacier National Park -->
+            <path d="M468 0 H800 V338 C760 334 720 322 676 312 C632 302 590 282 556 250 C538 210 520 160 504 112 C492 76 480 38 468 0Z" fill="#9EB092" opacity=".5" filter="url(#wc)"/>
+            <path d="M468 0 C480 38 492 76 504 112 C520 160 538 210 556 250 C590 282 632 302 676 312 C720 322 760 334 800 338" fill="none" stroke="#5f7356" stroke-width="1.4" stroke-dasharray="2 5" stroke-linecap="round" opacity=".7"/>
+
+            <!-- rivers -->
+            <g fill="none" stroke="#8FAAC0" stroke-linecap="round" filter="url(#wc)">
+              <path d="M800 350 C740 338 690 322 640 306 C602 294 572 276 548 258" stroke-width="2.6"/>
+              <path d="M470 0 C484 62 498 122 512 182 C522 226 532 256 544 268" stroke-width="2.6"/>
+              <path d="M544 268 C520 300 470 340 430 362 C400 378 382 392 372 404 C356 432 342 472 332 522 C324 572 320 640 318 720" stroke-width="3.4"/>
+              <path d="M214 334 C222 360 230 382 236 410 C242 452 238 500 246 540 C250 572 256 604 264 640 C268 672 272 700 276 720" stroke-width="1.8"/>
+            </g>
+
+            <!-- lakes (fill + darker painted edge) -->
+            <g id="lakes">
+              <path d="M214 334 C220 326 214 316 207 305 C199 292 190 280 181 269 C172 258 165 250 158 244 C152 240 145 243 147 251 C150 262 158 272 166 283 C175 296 184 308 193 319 C200 328 207 340 214 334Z" fill="#A9C0CE" filter="url(#wc)"/>
+              <path d="M214 334 C220 326 214 316 207 305 C199 292 190 280 181 269 C172 258 165 250 158 244 C152 240 145 243 147 251 C150 262 158 272 166 283 C175 296 184 308 193 319 C200 328 207 340 214 334Z" fill="none" stroke="#6F8FA6" stroke-width="2" opacity=".55" filter="url(#wcEdge)"/>
+              <path d="M538 212 C552 196 572 172 595 145 C615 121 632 99 646 80 C651 73 659 77 655 85 C642 104 624 128 604 152 C582 178 562 200 546 216 C541 221 534 217 538 212Z" fill="#A9C0CE" filter="url(#wc)"/>
+              <path d="M538 212 C552 196 572 172 595 145 C615 121 632 99 646 80 C651 73 659 77 655 85 C642 104 624 128 604 152 C582 178 562 200 546 216 C541 221 534 217 538 212Z" fill="none" stroke="#6F8FA6" stroke-width="2" opacity=".55" filter="url(#wcEdge)"/>
+            </g>
+
+            <!-- roads -->
+            <g fill="none" stroke="#9A7656" stroke-width="1.5" stroke-linecap="round" opacity=".7">
+              <path d="M233 346 C238 420 244 520 256 624 L262 720"/>
+              <path d="M256 624 C290 560 330 470 373 399 C410 380 450 372 480 350 C510 320 535 272 553 240"/>
+              <path d="M233 346 C280 362 330 380 373 399"/>
+              <path d="M233 346 C232 320 226 290 220 264 C217 250 215 240 213 232" stroke-dasharray="3 4"/>
+            </g>
+
+            <g id="trees"></g>
+            <g id="mtns" filter="url(#wc)"></g>
+
+            <!-- painted labels -->
+            <text class="water" transform="translate(132 312) rotate(51)">Whitefish Lake</text>
+            <text class="water" transform="translate(616 168) rotate(-50)" style="font-size:12px">Lake McDonald</text>
+            <text class="water" transform="translate(352 520) rotate(-79)" style="font-size:12px">Flathead River</text>
+            <text class="park" text-anchor="middle" x="688" y="226">Glacier</text><text class="park" text-anchor="middle" x="688" y="256" style="font-size:24px">National Park</text>
+            <text class="minor" x="384" y="420">COLUMBIA FALLS</text>
+            <text class="minor" x="540" y="258" text-anchor="end">WEST GLACIER</text>
+            <g transform="translate(306 476)" opacity=".85"><path d="M0 -6 L1.6 -1 L7 1.5 L7 3 L1.6 1.6 L1 6 L3 7.6 L3 8.6 L0 7.8 L-3 8.6 L-3 7.6 L-1 6 L-1.6 1.6 L-7 3 L-7 1.5 L-1.6 -1Z" fill="#6E5A4A"/></g>
+            <text class="minor" x="318" y="481">GLACIER AIRPORT · FCA</text>
+
+            <!-- pins -->
+            <g class="pin" data-key="mountain" tabindex="0" role="button" aria-label="Whitefish Mountain" transform="translate(212 226)"><g class="pinbody"><circle class="ring" cx="0" cy="-20" r="13"/><path class="drop" d="M0 0 C-6 -9 -10 -14 -10 -20 A10 10 0 1 1 10 -20 C10 -14 6 -9 0 0Z"/><circle cx="0" cy="-20" r="3.8" fill="#F3ECDD"/><circle cx="0" cy="-18" r="26" fill="transparent"/></g><text class="lbl" x="16" y="-26">Whitefish Mountain</text></g>
+            <g class="pin" data-key="lake" tabindex="0" role="button" aria-label="Whitefish Lake" transform="translate(180 290)"><g class="pinbody"><circle class="ring" cx="0" cy="-20" r="13"/><path class="drop" d="M0 0 C-6 -9 -10 -14 -10 -20 A10 10 0 1 1 10 -20 C10 -14 6 -9 0 0Z"/><circle cx="0" cy="-20" r="3.8" fill="#F3ECDD"/><circle cx="0" cy="-18" r="26" fill="transparent"/></g></g>
+            <g class="pin" data-key="town" tabindex="0" role="button" aria-label="Whitefish" transform="translate(234 348)"><g class="pinbody"><circle class="ring" cx="0" cy="-20" r="13"/><path class="drop" d="M0 0 C-6 -9 -10 -14 -10 -20 A10 10 0 1 1 10 -20 C10 -14 6 -9 0 0Z"/><circle cx="0" cy="-20" r="3.8" fill="#F3ECDD"/><circle cx="0" cy="-18" r="26" fill="transparent"/></g><text class="lbl" x="16" y="-14" style="font-size:16px">Whitefish</text></g>
+            <g class="pin" data-key="glacier" tabindex="0" role="button" aria-label="Glacier National Park" transform="translate(553 238)"><g class="pinbody"><circle class="ring" cx="0" cy="-20" r="13"/><path class="drop" d="M0 0 C-6 -9 -10 -14 -10 -20 A10 10 0 1 1 10 -20 C10 -14 6 -9 0 0Z"/><circle cx="0" cy="-20" r="3.8" fill="#F3ECDD"/><circle cx="0" cy="-18" r="26" fill="transparent"/></g></g>
+            <g class="pin" data-key="kalispell" tabindex="0" role="button" aria-label="Kalispell" transform="translate(256 624)"><g class="pinbody"><circle class="ring" cx="0" cy="-20" r="13"/><path class="drop" d="M0 0 C-6 -9 -10 -14 -10 -20 A10 10 0 1 1 10 -20 C10 -14 6 -9 0 0Z"/><circle cx="0" cy="-20" r="3.8" fill="#F3ECDD"/><circle cx="0" cy="-18" r="26" fill="transparent"/></g><text class="lbl" x="16" y="-14">Kalispell</text></g>
+
+            <!-- compass rose -->
+            <g transform="translate(78 640)" opacity=".9">
+              <circle r="30" fill="none" stroke="#3F2610" stroke-width=".8"/>
+              <circle r="25" fill="none" stroke="#3F2610" stroke-width=".4"/>
+              <path d="M0 -38 L5 -5 L0 0Z" fill="#3F2610"/><path d="M0 -38 L-5 -5 L0 0Z" fill="#7A4E2D"/>
+              <path d="M0 38 L5 5 L0 0Z" fill="#C8AC86"/><path d="M0 38 L-5 5 L0 0Z" fill="#a88b66"/>
+              <path d="M38 0 L5 5 L0 0Z" fill="#C8AC86"/><path d="M38 0 L5 -5 L0 0Z" fill="#a88b66"/>
+              <path d="M-38 0 L-5 5 L0 0Z" fill="#C8AC86"/><path d="M-38 0 L-5 -5 L0 0Z" fill="#a88b66"/>
+              <text class="minor" x="0" y="-44" text-anchor="middle" style="font-size:12px;fill:#3F2610">N</text>
+            </g>
+            <!-- scale bar (5 miles) -->
+            <g transform="translate(640 684)">
+              <rect x="0" y="0" width="46.5" height="4" fill="#3F2610"/><rect x="46.5" y="0" width="46.5" height="4" fill="none" stroke="#3F2610" stroke-width=".8"/>
+              <text class="minor" x="0" y="-6">0</text><text class="minor" x="93" y="-6" text-anchor="end">5 MI</text>
+            </g>
+            <!-- paper grain + double rule frame -->
+            <rect width="800" height="720" filter="url(#paper)" pointer-events="none"/>
+            <rect x="12" y="12" width="776" height="696" fill="none" stroke="#3F2610" stroke-width="1.2"/>
+            <rect x="18" y="18" width="764" height="684" fill="none" stroke="#3F2610" stroke-width=".5"/>
+          </svg>
+        </div>
+        <div class="mapinfo" id="mapinfo"></div>
+      </div>
+      <div class="travel-notes rv">
+        <div><h5>Fly In</h5><p>Glacier Park International (FCA) is about 20 minutes from Whitefish. American flies nonstop from Dallas/Fort Worth.</p></div>
+        <div><h5>Stay</h5><p>Hotel recommendations and room blocks are coming soon.</p></div>
+        <div><h5>Wedding Day</h5><p>Shuttles run between Whitefish and the ranch, so leave the car and enjoy the night.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="eyebrow caps rv">Good to know</div>
+      <h2 class="rv">Questions</h2>
+      <div class="faq rv">
+        <details><summary>What should I wear?</summary><p>Formal attire, for an elegant evening in the mountains. The ceremony and reception are on grass, so skip the stilettos.</p></details>
+        <details><summary>What will the weather be like?</summary><p>Mid-September in Whitefish is usually crisp and sunny during the day and cool once the sun sets. Bring a wrap or jacket for the evening.</p></details>
+        <details><summary>How do I get to the ranch?</summary><p>Shuttles run from set pickup spots in Whitefish to the ranch and back, on a schedule. We'll post the full timetable here closer to the weekend.</p></details>
+        <details><summary>What else should we do while we're there?</summary><p>Drive Going-to-the-Sun Road in Glacier National Park, paddle Whitefish Lake, ride the gondola on Whitefish Mountain, wander downtown Whitefish, and ask Thomas where the fish are biting.</p></details>
+        <details><summary>Where are you registered?</summary><p>Registry details are coming soon.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="rsvp">
+    <div class="wrap">
+      <div class="eyebrow caps rv">Kindly reply</div>
+      <h2 class="rv">Will you join us?</h2>
+      <div class="rsvp-card rv">
+        <span class="preview-badge">Preview · RSVPs open soon</span>
+        <form id="rsvpform" onsubmit="return false">
+          <div class="step show" data-step="1">
+            <label for="rname">Find your invitation</label>
+            <input type="text" id="rname" placeholder="First and last name" autocomplete="off">
+            <button class="btn" type="button" id="find">Find my RSVP</button>
+          </div>
+          <div class="step" data-step="2">
+            <p style="font-style:italic;color:var(--tan)">Howdy, <span id="who"></span>! We found your invitation.</p>
+            <label>Wedding · Saturday, September 18</label>
+            <div class="choice">
+              <label><input type="radio" name="attend" value="yes" checked><span>Joyfully accepts</span></label>
+              <label><input type="radio" name="attend" value="no"><span>Regretfully declines</span></label>
+            </div>
+            <label class="check"><input type="checkbox" checked> I'll be at the Welcome Party (Thursday)</label>
+            <label class="check"><input type="checkbox" checked> I'll be at the Post Toast (Friday)</label>
+            <label class="check"><input type="checkbox"> I'm interested in an early-morning fishing trip with Thomas 🎣</label>
+            <label for="song">A song that will get you on the dance floor</label>
+            <input type="text" id="song" placeholder="Song &amp; artist">
+            <button class="btn" type="button" id="send">Send RSVP</button>
+          </div>
+          <div class="step hooked" data-step="3">
+            <div class="big">You're hooked!</div>
+            <p style="color:var(--tan);margin-top:8px">We can't wait to celebrate with you in Montana.</p>
+            <p style="color:var(--tan);margin-top:14px;font-size:.9rem;font-style:italic">(This is just a preview. Nothing was sent, and RSVPs will open soon!)</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-logo" role="img" aria-label="ET monogram"></div>
+  <div class="script">Ella Grace &amp; Thomas</div>
+  <div class="caps" style="margin-top:10px">September 18, 2027 · Whitefish, Montana</div>
+  <div class="trail-ground" aria-hidden="true"></div>
+  <div class="rider" id="rider" aria-hidden="true">
+    <svg viewBox="0 0 124 94">
+      <g id="hz">
+        <!-- far legs (shaded) -->
+        <g id="lgHR" fill="#94491f"><path d="M-5 0 L5 0 L2.4 23 L-2.4 23Z"/><g class="lo"><path d="M-1.8 0 L1.8 0 L1.3 20 L-1.3 20Z"/><path d="M-2.3 19 h4.6 v3.2 h-4.6Z" fill="#2a1a10"/></g></g>
+        <g id="lgFR" fill="#94491f"><path d="M-3.8 0 L3.8 0 L2.2 22 L-2.2 22Z"/><g class="lo"><path d="M-1.7 0 L1.7 0 L1.3 20 L-1.3 20Z"/><path d="M-1.6 13 h3.2 v6.5 h-3.2Z" fill="#efe6d8"/><path d="M-2.3 19 h4.6 v3.2 h-4.6Z" fill="#2a1a10"/></g></g>
+        <!-- tail -->
+        <g id="hzTail"><path d="M2 0 C-6 -2 -14 1 -22 7 C-17 8 -9 7 0 5Z" fill="#5e2c12"/></g>
+        <!-- body -->
+        <path d="M34 34 C36 26 50 23 64 25 C76 26 86 25 92 31 C97 37 96 47 90 51 C82 55 70 54 60 54 C48 54 38 53 34 47 C31 43 31 38 34 34Z" fill="#b5652e"/>
+        <path d="M37 33 l7 0 M40.5 33 l0 8" stroke="#8a4520" stroke-width="1.6" stroke-linecap="square" opacity=".8"/>
+        <!-- neck + head -->
+        <g id="hzNeck">
+          <path d="M-4 4 C0 -6 6 -14 14 -19 L20 -14 C16 -8 12 2 8 12Z" fill="#b5652e"/>
+          <path d="M-3 -2 C2 -10 7 -16 13 -21 L15 -18 C9 -14 4 -7 0 2Z" fill="#7e3c18"/>
+          <path d="M13 -22 C17 -26 23 -26 26 -23 L32 -12 C33 -9 30 -7 27 -8 L19 -11 C16 -12 14 -15 13 -18Z" fill="#b5652e"/>
+          <path d="M16 -24 L17 -29 L19.5 -24Z" fill="#a85a27"/>
+          <path d="M22 -24.5 L30.5 -12 L29 -11 L21 -22.5Z" fill="#f4eee3"/>
+          <circle cx="20.5" cy="-20.5" r="1" fill="#1a1009"/>
+        </g>
+        <!-- rider (chocolate, leaning into the gallop) -->
+        <g id="hzRider" fill="#3F2610">
+          <path d="M58 6 C64 4 69 6 72 9 L70 10.5 C67 8.5 63 8 58.5 8.8Z"/>
+          <path d="M60 27 L67 28 L78 13.5 L71.5 10.5Z"/>
+          <circle cx="75.5" cy="8.6" r="4"/>
+          <ellipse cx="75.5" cy="5.4" rx="7.8" ry="1.5" transform="rotate(-8 75.5 5.4)"/>
+          <path d="M71.8 5.2 Q72.2 0 75.6 0 Q79 0 79.2 5Z"/>
+          <path d="M75 14 L87 22" stroke="#3F2610" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <path d="M63 27.5 L70 35 L66 43" stroke="#3F2610" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M87 22 L113 14" stroke="#3F2610" stroke-width=".8" fill="none"/>
+        </g>
+        <!-- near legs -->
+        <g id="lgHL" fill="#b5652e"><path d="M-5 0 L5 0 L2.4 23 L-2.4 23Z"/><g class="lo"><path d="M-1.8 0 L1.8 0 L1.3 20 L-1.3 20Z"/><path d="M-2.3 19 h4.6 v3.2 h-4.6Z" fill="#2a1a10"/></g></g>
+        <g id="lgFL" fill="#b5652e"><path d="M-3.8 0 L3.8 0 L2.2 22 L-2.2 22Z"/><g class="lo"><path d="M-1.7 0 L1.7 0 L1.3 20 L-1.3 20Z"/><path d="M-1.6 13 h3.2 v6.5 h-3.2Z" fill="#f4eee3"/><path d="M-2.3 19 h4.6 v3.2 h-4.6Z" fill="#2a1a10"/></g></g>
+      </g>
+    </svg>
+  </div>
+</footer>
+
+<div class="draft-pill">Draft v1</div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  /* ---------- brand intro (once per visit) ---------- */
+  const brand = $('#brand');
+  let seen = false;
+  try { seen = sessionStorage.getItem('egt-brand') === '1'; } catch (e) {}
+  const dismiss = () => { brand.classList.add('done'); try { sessionStorage.setItem('egt-brand', '1'); } catch (e) {} };
+  if (seen || reduce) brand.classList.add('done');
+  else { brand.addEventListener('click', dismiss); setTimeout(dismiss, 2900); }
+
+  const NS = 'http://www.w3.org/2000/svg';
+
+  /* ---------- hero: names drift up & fade, painting settles as it scrolls in ---------- */
+  const hero = $('.hero'), landImg = $('#land img'), title = $('#title'), cue = $('#cue'), nav = $('#nav');
+  function heroFrame() {
+    const y = scrollY, vh = innerHeight;
+    if (!reduce) {
+      const p = clamp(y / vh, 0, 1.4);
+      title.style.transform = `translate3d(0,${y * .45}px,0)`;
+      title.style.opacity = 1 - clamp(y / (vh * .55), 0, 1);
+      landImg.style.transform = `scale(${1.1 - clamp(p, 0, 1) * .1})`;
+    }
+    cue.style.opacity = 1 - clamp(y / 120, 0, 1);
+    nav.classList.toggle('solid', y > 40);
+  }
+
+  /* ---------- reveal on scroll ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+  $$('.rv').forEach(el => io.observe(el));
+
+  /* ---------- countdown ---------- */
+  const target = new Date('2027-09-18T17:00:00-06:00').getTime();
+  const pad = n => String(n).padStart(2, '0');
+  function tick() {
+    let s = Math.max(0, Math.floor((target - Date.now()) / 1000));
+    const dd = Math.floor(s / 86400); s %= 86400;
+    $('#cd-d').textContent = dd; $('#cd-h').textContent = pad(Math.floor(s / 3600));
+    $('#cd-m').textContent = pad(Math.floor(s % 3600 / 60)); $('#cd-s').textContent = pad(s % 60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- horizontal photo reel ---------- */
+  const reel = $('#reel'), track = $('#track'), bar = $('#reelbar');
+  // photos hold still when they fit on screen; otherwise they slide sideways as you scroll
+  let reelExtra = 0;
+  function sizeReel() {
+    reelExtra = Math.max(0, track.scrollWidth - innerWidth);
+    reel.style.height = (innerHeight + reelExtra) + 'px';
+    bar.parentElement.classList.toggle('off', reelExtra === 0);
+  }
+  function reelFrame() {
+    if (!reelExtra) { track.style.transform = ''; return; }
+    const r = reel.getBoundingClientRect();
+    const p = clamp(-r.top / reelExtra, 0, 1);
+    track.style.transform = `translate3d(${-p * reelExtra}px,0,0)`;
+    bar.style.transform = `scaleX(${p})`;
+  }
+
+  /* ---------- boot prints ---------- */
+  const SHOE = '<path d="M4 30 C1.5 19 2 4 13 2 C24 4 24.5 19 22 30 L17.5 30 C19 21 18.5 9.5 13 8 C7.5 9.5 7 21 8.5 30Z"/>'
+    + '<g fill="#F4EEE3"><circle cx="5.6" cy="22" r=".9"/><circle cx="5.2" cy="15" r=".9"/><circle cx="7.4" cy="8.6" r=".9"/>'
+    + '<circle cx="20.4" cy="22" r=".9"/><circle cx="20.8" cy="15" r=".9"/><circle cx="18.6" cy="8.6" r=".9"/></g>';
+  $$('.prints').forEach(box => {
+    const toRight = box.dataset.dir === 'right';
+    const n = 6;
+    for (let i = 0; i < n; i++) {
+      const s = document.createElementNS(NS, 'svg'); s.setAttribute('viewBox', '0 0 26 32'); s.innerHTML = SHOE;
+      const t = i / (n - 1);
+      const x = toRight ? 25 + t * 50 : 75 - t * 50;
+      const side = i % 2 ? 1 : -1;
+      const ang = (toRight ? -1 : 1) * 38 + 180;
+      s.style.left = `calc(${x}% + ${side * 10}px)`; s.style.top = (4 + t * 64) + '%';
+      s.style.transform = `rotate(${ang}deg)`;
+      s.style.transitionDelay = (i * .22) + 's';
+      box.appendChild(s);
+    }
+    new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { box.querySelectorAll('svg').forEach(s => s.classList.add('on')); o.disconnect(); } }), { threshold: .5 }).observe(box);
+  });
+
+  /* ---------- fly line + fly fisherman ---------- */
+  const river = $('#river'), svg = $('#flyline'), path = $('#linepath'), fly = $('#fly');
+  const fisher = $('#fisher'), rod = $('#rod'), reelDot = $('#fishreel'), castLine = $('#castline'), ripples = $('#ripples');
+  let len = 0, firstLen = 0, G = null, castDone = reduce, casting = false;
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const ease = t => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+  const qpt = (a, c, b, t) => ({ x: (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * c.x + t * t * b.x, y: (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * c.y + t * t * b.y });
+  function tipAt(deg) { const a = deg * Math.PI / 180; return { x: G.hx + G.rl * Math.cos(a), y: G.hy + G.rl * Math.sin(a) }; }
+  function setRod(deg) { const t = tipAt(deg); rod.setAttribute('x1', G.hx); rod.setAttribute('y1', G.hy); rod.setAttribute('x2', t.x); rod.setAttribute('y2', t.y); return t; }
+  function placeFly(x, y, ang) { fly.setAttribute('transform', `translate(${x} ${y}) rotate(${ang}) scale(${G ? G.s * 1.1 : 1})`); }
+  function drawCast(tip, C, F, prevF) {
+    castLine.setAttribute('d', `M${tip.x} ${tip.y} Q${C.x} ${C.y} ${F.x} ${F.y}`);
+    const ang = prevF ? Math.atan2(F.y - prevF.y, F.x - prevF.x) * 180 / Math.PI : 90;
+    placeFly(F.x, F.y, ang); fly.style.opacity = 1;
+  }
+  function restPose() {
+    const tip = setRod(G.rest);
+    if (castDone) return;
+    const dangle = { x: tip.x + 4 * G.s, y: tip.y + 46 * G.s };
+    drawCast(tip, { x: tip.x + 2, y: tip.y + 20 * G.s }, dangle);
+  }
+
+  function buildLine() {
+    const W = river.clientWidth, H = river.scrollHeight;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const mobile = W < 760;
+    const gutter = mobile ? 20 : Math.max(26, (W - 900) / 4);
+    const L = gutter, R = W - gutter;
+
+    // fisherman geometry
+    const s = mobile ? .55 : 1;
+    const fx = mobile ? 30 : Math.max(46, L - 40), fy = mobile ? 92 : 165;
+    fisher.setAttribute('transform', `translate(${fx} ${fy}) scale(${s})`);
+    G = { s, fx, fy, hx: fx + 16 * s, hy: fy - 84 * s, rl: 104 * s, rest: -36 };
+    reelDot.setAttribute('cx', G.hx - 2 * s); reelDot.setAttribute('cy', G.hy + 6 * s); reelDot.setAttribute('r', 3.2 * s);
+    const tip = tipAt(G.rest);
+    G.tip = tip;
+    G.lnd = { x: tip.x + (mobile ? 40 : 70) * s, y: fy + 10 * s };
+    G.ctrl = { x: tip.x + 8 * s, y: G.lnd.y - 6 * s };
+
+    const secs = [...river.children].filter(el => el.tagName === 'SECTION' || el.id === 'reel');
+    let side = 0;
+    let dd = `M${tip.x} ${tip.y} Q${G.ctrl.x} ${G.ctrl.y} ${G.lnd.x} ${G.lnd.y}`;
+    const tmp = document.createElementNS(NS, 'path'); tmp.setAttribute('d', dd); svg.appendChild(tmp);
+    firstLen = tmp.getTotalLength(); tmp.remove();
+    let x = L, y = G.lnd.y + 110 * s;
+    dd += ` C${G.lnd.x + 30 * s} ${G.lnd.y + 40 * s} ${x} ${y - 60 * s} ${x} ${y}`;
+    secs.forEach((sec, i) => {
+      const bottom = sec.offsetTop + sec.offsetHeight;
+      const endY = bottom - 70;
+      const steps = Math.max(2, Math.round((endY - y) / 160));
+      const stepH = (endY - y) / steps;
+      for (let k = 0; k < steps; k++) {
+        const amp = (k % 2 ? 1 : -1) * (mobile ? 5 : 14) * (side ? -1 : 1);
+        dd += ` Q${x + amp} ${y + stepH / 2} ${x} ${y + stepH}`;
+        y += stepH;
+      }
+      if (!mobile && i < secs.length - 1) {
+        const nx = side ? L : R;
+        dd += ` C${x} ${y + 70} ${nx} ${y + 40} ${nx} ${y + 130}`;
+        x = nx; y += 130; side = 1 - side;
+      }
+    });
+    path.setAttribute('d', dd);
+    len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    if (!casting) restPose();
+  }
+
+  function splash() {
+    ripples.innerHTML = '';
+    const { x, y } = G.lnd;
+    [0, .35, .7].forEach(d => {
+      const e = document.createElementNS(NS, 'ellipse');
+      e.setAttribute('cx', x); e.setAttribute('cy', y + 2); e.setAttribute('rx', 14 * G.s); e.setAttribute('ry', 4 * G.s);
+      e.setAttribute('class', 'rip'); e.style.animationDelay = d + 's'; ripples.appendChild(e);
+    });
+    const still = document.createElementNS(NS, 'ellipse');
+    still.setAttribute('cx', x); still.setAttribute('cy', y + 2); still.setAttribute('rx', 22 * G.s); still.setAttribute('ry', 4.5 * G.s);
+    still.setAttribute('class', 'rip-still'); ripples.appendChild(still);
+  }
+
+  function cast() {
+    if (!G || casting) return;
+    if (reduce) { castDone = true; svg.classList.add('cast-done'); lineFrame(); return; }
+    casting = true; castDone = false; svg.classList.remove('cast-done');
+    const s = G.s, T = 2100, t0 = performance.now();
+    const dangle0 = { x: G.tip.x + 4 * s, y: G.tip.y + 46 * s };
+    let prevF = dangle0;
+    const B = { x: G.hx - 150 * s, y: G.hy - 95 * s }, B2 = { x: G.hx - 162 * s, y: G.hy - 78 * s }, A = { x: G.lnd.x + 46 * s, y: G.tip.y - 26 * s };
+    function frame(now) {
+      const t = Math.min(1, (now - t0) / T);
+      let ang, F, C, tip;
+      if (t < .32) {                       // back cast: rod sweeps back, line follows behind
+        const k = ease(t / .32);
+        ang = lerp(G.rest, -128, k); tip = setRod(ang);
+        F = qpt(dangle0, { x: G.hx + 40 * s, y: G.hy - 150 * s }, B, k);
+        C = { x: (tip.x + F.x) / 2, y: Math.min(tip.y, F.y) - 18 * s * (1 - k) };
+      } else if (t < .44) {                // pause while the line straightens out behind
+        const k = (t - .32) / .12;
+        ang = lerp(-128, -122, k); tip = setRod(ang);
+        F = { x: lerp(B.x, B2.x, k), y: lerp(B.y, B2.y, k) };
+        C = { x: (tip.x + F.x) / 2, y: (tip.y + F.y) / 2 + 6 * s };
+      } else if (t < .74) {                // forward cast: tight loop rolls out over the top
+        const k = ease((t - .44) / .3);
+        ang = lerp(-122, -48, k); tip = setRod(ang);
+        F = qpt(B2, { x: G.hx + 10 * s, y: G.hy - 210 * s }, A, k);
+        C = { x: lerp(tip.x - 30 * s, tip.x + 50 * s, k), y: Math.min(tip.y, F.y) - 40 * s * Math.sin(Math.PI * k) };
+      } else {                             // lay it down softly on the water
+        const k = ease((t - .74) / .26);
+        ang = lerp(-48, G.rest, k); tip = setRod(ang);
+        F = { x: lerp(A.x, G.lnd.x, k), y: lerp(A.y, G.lnd.y, k) };
+        C = { x: lerp((tip.x + A.x) / 2, G.ctrl.x, k), y: lerp(tip.y - 10 * s, G.ctrl.y, k) };
+      }
+      drawCast(tip, C, F, prevF); prevF = F;
+      if (t < 1) requestAnimationFrame(frame);
+      else { casting = false; castDone = true; landTime = performance.now(); svg.classList.add('cast-done'); splash(); lineFrame(); }
+    }
+    requestAnimationFrame(frame);
+  }
+  fisher.addEventListener('click', cast);
+  new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { setTimeout(cast, 250); o.disconnect(); } }), { rootMargin: '0px 0px -45% 0px' }).observe($('#welcome'));
+
+  const trout = $('#trout'), troutFlip = $('#troutFlip');
+  const MOUTH = 36;                       // nose tip in trout drawing units
+  let hooked = false, hookTime = 0, landTime = 0;
+  const lerpAng = (a, b, t) => a + ((((b - a) % 360) + 540) % 360 - 180) * t;
+  function tanAt(L) {
+    const a = path.getPointAtLength(Math.max(0, L - 1)), b = path.getPointAtLength(Math.min(len, L + 1));
+    return Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
+  }
+  function placeTrout(at, flyPt, now) {
+    const s = G ? G.s : 1;
+    if (!hooked && at >= len - 1.5) { hooked = true; hookTime = now; trout.classList.add('hooked'); }
+    if (hooked && !trout.dataset.onTop && now - hookTime > 350) { fly.parentNode.appendChild(trout); trout.dataset.onTop = '1'; }
+
+    // chasing: mouth trails the fly, surging in and out, weaving back and forth across the line
+    const approach = clamp((len - at) / (260 * s), 0, 1);        // closes the gap near the bottom
+    const lag = (54 + Math.sin(now / 360) * 12 + Math.sin(now / 1170) * 8) * s * approach;
+    const k = clamp((at - firstLen) / (70 * s), 0, 1);           // 0 = fly just landed
+    const mAt = Math.max(firstLen, at - lag);
+    const m = path.getPointAtLength(mAt), td = tanAt(mAt), tr = td * Math.PI / 180;
+    const weave = reduce ? 0 : Math.sin(now / 650) * 16 * s * k * approach;
+    let mx = m.x - Math.sin(tr) * weave, my = m.y + Math.cos(tr) * weave;
+    let deg = td + (reduce ? 0 : Math.cos(now / 650) * 20 * k * approach);
+
+    // just landed: swims in from the bottom right and hangs there eyeing the fly
+    if (k < 1) {
+      const e = clamp((now - landTime) / 1600, 0, 1), ee = 1 - Math.pow(1 - e, 3);
+      const lx = flyPt.x + lerp(170, 30, ee) * s, ly = flyPt.y + lerp(120, 24, ee) * s;
+      const toFly = Math.atan2(flyPt.y - ly, flyPt.x - lx) * 180 / Math.PI;
+      mx = lerp(lx, mx, k); my = lerp(ly, my, k); deg = lerpAng(toFly, deg, k);
+    }
+
+    // hooked: mouth on the fly, facing back up the line, gentle head shakes; stays this way until reload
+    let shake = 0;
+    if (hooked) {
+      const h = clamp((now - hookTime) / 700, 0, 1), he = h * h * (3 - 2 * h);
+      const hd = (tanAt(at) + 180) * Math.PI / 180, tuck = 5 * s;
+      mx = lerp(mx, flyPt.x + Math.cos(hd) * tuck, he); my = lerp(my, flyPt.y + Math.sin(hd) * tuck, he);
+      deg = lerpAng(deg, tanAt(at) + 180, he);
+      if (!reduce) shake = Math.sin(now / 85) * 9 * (0.55 + 0.45 * Math.sin(now / 1300)) * he;
+    }
+    const d = deg + shake;
+    trout.setAttribute('transform', `translate(${mx} ${my}) rotate(${d}) scale(${s * 1.15}) translate(${-MOUTH} 0)`);
+    troutFlip.setAttribute('transform', Math.cos(d * Math.PI / 180) < 0 ? 'scale(1 -1)' : '');   // belly stays down
+  }
+
+  function lineFrame(now) {
+    now = typeof now === 'number' ? now : performance.now();
+    if (!len || !castDone || casting) return;
+    // keep the fly ~62% down the screen: find the point on the line at that height
+    const r = river.getBoundingClientRect();
+    let at = len;
+    if (!reduce) {
+      const targetY = innerHeight * .62 - r.top;
+      let lo = 0, hi = len;
+      for (let i = 0; i < 22; i++) { const mid = (lo + hi) / 2; if (path.getPointAtLength(mid).y < targetY) lo = mid; else hi = mid; }
+      at = Math.max(firstLen, hi);
+      if (innerHeight + scrollY >= document.documentElement.scrollHeight - 30) at = len;
+    }
+    path.style.strokeDashoffset = len - at;
+    const pt = path.getPointAtLength(at), pt2 = path.getPointAtLength(Math.min(len, at + 1));
+    const ang = Math.atan2(pt2.y - pt.y, pt2.x - pt.x) * 180 / Math.PI;
+    placeFly(pt.x, pt.y, at <= firstLen + 1 ? 0 : ang);
+    fly.style.opacity = 1;
+    placeTrout(at, pt, now);
+  }
+
+  // keep the trout chasing (surging) even when the page isn't scrolling
+  let riverVisible = false;
+  new IntersectionObserver(es => es.forEach(e => { riverVisible = e.isIntersecting; if (riverVisible) requestAnimationFrame(chase); })).observe(river);
+  function chase(now) { if (!riverVisible || reduce) return; lineFrame(now); requestAnimationFrame(chase); }
+
+  /* ---------- her chestnut galloping across the footer: 5s across, every 30s ---------- */
+  (() => {
+    const rider = $('#rider'), hz = $('#hz'), neck = $('#hzNeck'), tail = $('#hzTail'), riderBody = $('#hzRider');
+    const legs = {
+      HL: { el: $('#lgHL'), x: 41, y: 45, L1: 23, fore: false, ph: 0 },
+      HR: { el: $('#lgHR'), x: 44, y: 45, L1: 23, fore: false, ph: .1 },
+      FL: { el: $('#lgFL'), x: 84, y: 47, L1: 22, fore: true,  ph: .32 },
+      FR: { el: $('#lgFR'), x: 87, y: 47, L1: 22, fore: true,  ph: .42 },
+    };
+    Object.values(legs).forEach(l => l.lo = l.el.querySelector('.lo'));
+    const STRIDE = 380, CROSS = 5000, LOOP = 30000, STANCE = .34;
+    const smooth = t => (1 - Math.cos(Math.PI * t)) / 2;
+    function pose(l, u) {                       // u = 0..1 through the stride
+      let up, lo;
+      if (u < STANCE) {                         // hoof planted, leg sweeps back under the body
+        const s = u / STANCE;
+        up = l.fore ? lerp(-30, 34, s) : lerp(-22, 40, s);
+        lo = l.fore ? lerp(4, -6, s) : lerp(-16, -4, s);
+      } else {                                  // swing: fold the joint, reach forward
+        const s = (u - STANCE) / (1 - STANCE), f = Math.sin(Math.PI * Math.min(1, s * 1.15));
+        up = l.fore ? lerp(34, -30, smooth(s)) : lerp(40, -22, smooth(s));
+        lo = l.fore ? 4 + f * 105 : -16 - f * 70;
+      }
+      l.el.setAttribute('transform', `translate(${l.x} ${l.y}) rotate(${up})`);
+      l.lo.setAttribute('transform', `translate(0 ${l.L1}) rotate(${lo})`);
+    }
+    let start = null, visible = false;
+    new IntersectionObserver(es => es.forEach(e => {
+      visible = e.isIntersecting;
+      if (visible) { if (start === null) start = performance.now() + 600; requestAnimationFrame(tick); }
+    })).observe($('footer'));
+    function tick(now) {
+      if (!visible) return;
+      const t = (now - start) % LOOP, w = rider.offsetWidth;
+      if (now < start || t > CROSS) { rider.style.visibility = 'hidden'; requestAnimationFrame(tick); return; }
+      const k = t / CROSS;
+      rider.style.visibility = 'visible';
+      rider.style.transform = `translateX(${lerp(-w - 20, innerWidth + 20, k)}px)`;
+      const c = (now % STRIDE) / STRIDE;
+      for (const l of Object.values(legs)) pose(l, (c - l.ph + 1) % 1);
+      const lift = Math.sin(2 * Math.PI * (c - .62));             // highest in the moment of suspension
+      hz.setAttribute('transform', `translate(0 ${-lift * 2.2}) rotate(${Math.sin(2 * Math.PI * (c - .2)) * 3.5} 62 46)`);
+      neck.setAttribute('transform', `translate(88 34) rotate(${Math.sin(2 * Math.PI * (c - .35)) * 7})`);
+      tail.setAttribute('transform', `translate(34 36) rotate(${-6 + Math.sin(2 * Math.PI * c * 2) * 7})`);
+      riderBody.setAttribute('transform', `translate(0 ${lift * 1.1})`);
+      requestAnimationFrame(tick);
+    }
+    if (reduce) {                                // no motion: stand still in the corner
+      for (const l of Object.values(legs)) pose(l, .17);
+      neck.setAttribute('transform', 'translate(88 34)'); tail.setAttribute('transform', 'translate(34 36) rotate(30)');
+      rider.style.visibility = 'visible'; rider.style.left = 'auto'; rider.style.right = '8%';
+    }
+  })();
+
+  /* ---------- painted map ---------- */
+  const PLACES = {
+    town: ['Home base', 'Whitefish', 'A walkable main street with great restaurants, shops, and a little Western charm. Wedding-day shuttles leave from here.', 'The center of it all'],
+    lake: ['On the water', 'Whitefish Lake', 'Seven miles of clear mountain water right at the edge of town. Swim or paddleboard at City Beach. The Lodge, home of Friday’s Post Toast, sits on the south shore.', '~5 min from downtown'],
+    mountain: ['Explore', 'Whitefish Mountain', 'Ride the summit gondola for views across the valley and into Glacier. The fall colors should be starting in mid-September.', '~20 min from downtown'],
+    glacier: ['Bucket list', 'Glacier National Park', 'Drive Going-to-the-Sun Road, walk the shore of Lake McDonald, and keep an eye out for mountain goats.', '~35 min to West Glacier'],
+    kalispell: ['Nearby', 'Kalispell', 'The valley’s biggest town, with more shops and restaurants. Glacier Park International Airport (FCA) sits between here and Whitefish.', '~20 min from Whitefish'],
+  };
+  const info = $('#mapinfo');
+  function showPlace(k) {
+    const [tag, name, text, drive] = PLACES[k];
+    info.innerHTML = `<div class="caps">${tag}</div><h4>${name}</h4><p>${text}</p><div class="drive">${drive}</div>`;
+    $$('.pin').forEach(p => p.classList.toggle('active', p.dataset.key === k));
+  }
+  $$('.pin').forEach(p => {
+    p.addEventListener('click', () => showPlace(p.dataset.key));
+    p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showPlace(p.dataset.key); } });
+  });
+  showPlace('town');
+
+  // painted mountain ranges + pine stands
+  (() => {
+    let sd = 11; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
+    const MTNS = [
+      [213,236,34,50],[252,196,26,36],[284,156,28,38],[180,176,24,30],[318,222,22,28],[236,120,24,30],              // Whitefish Range
+      [600,142,40,52],[662,172,34,44],[702,110,44,60],[744,192,36,46],[560,92,30,38],[622,44,32,40],[724,42,38,50],
+      [764,262,30,36],[686,252,28,34],[545,124,24,30],[780,110,26,34],[650,108,26,32],                              // Glacier
+      [70,300,28,30],[100,420,26,28],[62,520,30,32],[124,600,24,26],[88,200,24,28],[150,470,20,22],                  // Salish
+      [522,566,30,40],[582,522,34,44],[642,586,30,38],[702,504,32,42],[760,566,28,36],[470,610,24,30],[740,430,26,32] // Swan Range
+    ];
+    let m = '';
+    MTNS.sort((a, b) => a[1] - b[1]).forEach(([x, y, w, h]) => {
+      m += `<path d="M${x - w} ${y} L${x} ${y - h} L${x} ${y}Z" fill="#b9c5b4"/>`;
+      m += `<path d="M${x} ${y - h} L${x + w} ${y} L${x} ${y}Z" fill="#8c9e8c"/>`;
+      m += `<path d="M${x - w * .3} ${y - h * .7} L${x} ${y - h} L${x + w * .3} ${y - h * .7} L${x + w * .12} ${y - h * .64} L${x} ${y - h * .72} L${x - w * .14} ${y - h * .63}Z" fill="#FAF6EE"/>`;
+    });
+    $('#mtns').innerHTML = m;
+    const STANDS = [[120,262],[96,372],[146,520],[300,282],[340,178],[440,252],[470,160],[600,388],[684,430],[152,664],[560,646],[410,300],[200,420],[390,560],[720,640]];
+    const greens = ['#4f6b4e', '#6b8560', '#3f5a44', '#7d9468'];
+    let t = '';
+    STANDS.forEach(([cx, cy]) => {
+      for (let i = 0; i < 8; i++) {
+        const x = cx + (r() - .5) * 46, y = cy + (r() - .5) * 26, h = 9 + r() * 7, w = h * .42;
+        t += `<path d="M${x} ${y - h} L${x + w} ${y} L${x - w} ${y}Z" fill="${greens[Math.floor(r() * 4)]}" opacity=".78"/>`;
+      }
+    });
+    $('#trees').innerHTML = t;
+    $$('.pin .pinbody').forEach((b, i) => b.style.animationDelay = (i * .12) + 's');
+    if (reduce) $('#map').classList.add('in');
+    else new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { $('#map').classList.add('in'); o.disconnect(); } }), { threshold: .3 }).observe($('#map'));
+  })();
+
+  /* ---------- RSVP preview ---------- */
+  const go = n => $$('.step').forEach(s => s.classList.toggle('show', s.dataset.step == n));
+  $('#find').addEventListener('click', () => { const v = $('#rname').value.trim(); $('#who').textContent = v ? v.split(' ')[0] : 'friend'; go(2); });
+  $('#rname').addEventListener('keydown', e => { if (e.key === 'Enter') $('#find').click(); });
+  $('#send').addEventListener('click', () => go(3));
+
+  /* ---------- loop ---------- */
+  let ticking = false;
+  function frame() { heroFrame(); reelFrame(); lineFrame(); ticking = false; }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  function layout() { sizeReel(); buildLine(); frame(); }
+  let lastW = innerWidth, lastH = innerHeight;
+  addEventListener('resize', () => {
+    if (Math.abs(innerWidth - lastW) < 2 && Math.abs(innerHeight - lastH) < 160) { frame(); return; }
+    lastW = innerWidth; lastH = innerHeight; layout();
+  });
+  addEventListener('load', layout);
+  document.fonts && document.fonts.ready.then(layout);
+  layout();
+})();
+</script>
+</body>
+</html>
