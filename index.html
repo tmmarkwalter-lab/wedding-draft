@@ -102,6 +102,9 @@ nav.solid{background:rgba(244,238,227,.94);color:var(--choc);text-shadow:none;bo
 @keyframes rip{from{transform:scale(.2);opacity:.9}to{transform:scale(2.6);opacity:0}}
 .rip-still{fill:none;stroke:var(--deepblue);stroke-width:1;opacity:.35}
 #fly{transition:opacity .3s}
+#flyline.netted #linepath{opacity:0}
+#flyline.netted #castline{opacity:1}
+#flyline.netted #fly{opacity:0 !important}
 section{position:relative;padding:130px 0}
 .eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--saddle);margin-bottom:18px}
 .eyebrow::before,.eyebrow::after{content:"";width:38px;height:1px;background:currentColor;opacity:.6}
@@ -300,8 +303,8 @@ footer .caps{color:var(--logo);font-weight:600}
         <path d="M-7 -120 Q-6 -131 1 -131 Q8 -131 8 -120Z"/>
         <path d="M-6 -100 Q-15 -88 -6 -80" stroke="#2B1810" stroke-width="6" fill="none" stroke-linecap="round"/>
         <path d="M6 -101 Q17 -97 16 -84" stroke="#2B1810" stroke-width="6" fill="none" stroke-linecap="round"/>
-        <path d="M-10 -98 L-19 -82" stroke="#2B1810" stroke-width="1.6" fill="none"/>
-        <ellipse cx="-21" cy="-75" rx="5" ry="7.5" fill="rgba(43,24,16,.12)" stroke="#2B1810" stroke-width="1.4"/>
+        <g id="hipNet"><path d="M-10 -98 L-19 -82" stroke="#2B1810" stroke-width="1.6" fill="none"/>
+        <ellipse cx="-21" cy="-75" rx="5" ry="7.5" fill="rgba(43,24,16,.12)" stroke="#2B1810" stroke-width="1.4"/></g>
       </g>
     </g>
     <line id="rod" stroke="#2B1810" stroke-width="2.4" stroke-linecap="round"/>
@@ -309,6 +312,9 @@ footer .caps{color:var(--logo);font-weight:600}
     <g id="ripples"></g>
     <path id="castline" d=""/>
     <defs>
+      <pattern id="netMesh" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <path d="M0 0 H6 M0 0 V6" stroke="rgba(43,24,16,.55)" stroke-width=".8" fill="none"/>
+      </pattern>
       <linearGradient id="troutSkin" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#4b5a2a"/><stop offset=".38" stop-color="#8d8f45"/>
         <stop offset=".62" stop-color="#d4b263"/><stop offset="1" stop-color="#efe1b4"/>
@@ -334,6 +340,11 @@ footer .caps{color:var(--logo);font-weight:600}
       <path d="M35.6 .6 L30.5 2.2" stroke="rgba(30,25,15,.5)" stroke-width=".8"/>
       <circle cx="29" cy="-2.6" r="1.7" fill="#1a140c"/><circle cx="29.5" cy="-3.1" r=".5" fill="#fff"/>
     </g></g></g>
+    <g id="net" style="display:none" aria-hidden="true">
+      <line id="netHandle" stroke="#2B1810" stroke-width="2.4" stroke-linecap="round"/>
+      <path id="netBag" fill="url(#netMesh)" stroke="#2B1810" stroke-width=".9" stroke-opacity=".7"/>
+      <ellipse id="netHoop" fill="none" stroke="#2B1810" stroke-width="2"/>
+    </g>
     <g id="fly">
       <!-- dry fly: tail, body, hackle, wing -->
       <path d="M-16 0 L-8 -1 L-8 1Z" fill="#c8ac86"/>
@@ -476,9 +487,6 @@ footer .caps{color:var(--logo);font-weight:600}
             </div>
             <label class="check"><input type="checkbox" checked> I'll be at the Welcome Party (Thursday)</label>
             <label class="check"><input type="checkbox" checked> I'll be at the Post Toast (Friday)</label>
-            <label class="check"><input type="checkbox"> I'm interested in an early-morning fishing trip with Thomas 🎣</label>
-            <label for="song">A song that will get you on the dance floor</label>
-            <input type="text" id="song" placeholder="Song &amp; artist">
             <button class="btn" type="button" id="send">Send RSVP</button>
           </div>
           <div class="step hooked" data-step="3">
@@ -706,6 +714,10 @@ footer .caps{color:var(--logo);font-weight:600}
   function cast() {
     if (!G || casting) return;
     if (reduce) { castDone = true; svg.classList.add('cast-done'); lineFrame(); return; }
+    if (netT0) {                          // let the netted trout go and fish again
+      netT0 = 0; netRipple = false; hooked = false; trout.classList.remove('hooked');
+      net.style.display = 'none'; hipNet.style.display = ''; svg.classList.remove('netted');
+    }
     casting = true; castDone = false; svg.classList.remove('cast-done');
     const s = G.s, T = 2100, t0 = performance.now();
     const dangle0 = { x: G.tip.x + 4 * s, y: G.tip.y + 46 * s };
@@ -747,6 +759,8 @@ footer .caps{color:var(--logo);font-weight:600}
   const trout = $('#trout'), troutFlip = $('#troutFlip');
   const MOUTH = 36;                       // nose tip in trout drawing units
   let hooked = false, hookTime = 0, landTime = 0;
+  const net = $('#net'), netHandle = $('#netHandle'), netBag = $('#netBag'), netHoop = $('#netHoop'), hipNet = $('#hipNet');
+  let netT0 = 0, netRipple = false, lastM = null, lastD = 0;
   const lerpAng = (a, b, t) => a + ((((b - a) % 360) + 540) % 360 - 180) * t;
   function tanAt(L) {
     const a = path.getPointAtLength(Math.max(0, L - 1)), b = path.getPointAtLength(Math.min(len, L + 1));
@@ -785,13 +799,69 @@ footer .caps{color:var(--logo);font-weight:600}
       if (!reduce) shake = Math.sin(now / 85) * 9 * (0.55 + 0.45 * Math.sin(now / 1300)) * he;
     }
     const d = deg + shake;
+    lastM = { x: mx, y: my }; lastD = d;
     trout.setAttribute('transform', `translate(${mx} ${my}) rotate(${d}) scale(${s * 1.15}) translate(${-MOUTH} 0)`);
     troutFlip.setAttribute('transform', Math.cos(d * Math.PI / 180) < 0 ? 'scale(1 -1)' : '');   // belly stays down
+  }
+
+  /* ---------- landing the fish: reel in, scoop with the net, lift it up ---------- */
+  let net0 = null;
+  function netFrame(now) {
+    const s = G.s, t = now - netT0, sc = s * 1.15, BODY = 37;
+    const ph = (a, b) => ease(clamp((t - a) / (b - a), 0, 1));
+    const R2 = (deg, r) => ({ x: Math.cos(deg * Math.PI / 180) * r, y: Math.sin(deg * Math.PI / 180) * r });
+    const feet = { x: G.fx + 64 * s, y: G.fy + 6 * s };          // in the shallows just in front of him
+    const up = { x: G.fx + 38 * s, y: G.fy - 56 * s };           // held up at his waist
+    const hip = { x: G.fx - 21 * s, y: G.fy - 75 * s }, hand = { x: G.fx - 4 * s, y: G.fy - 82 * s };
+    const reel = ph(0, 1300), scoop = ph(800, 1750), lift = ph(1750, 2700);
+
+    // trout: drawn about its middle so it sits in the hoop
+    const thrash = reduce ? 0 : Math.sin(now / 75) * lerp(16, 6, lift) * (0.6 + 0.4 * Math.sin(now / 900));
+    let deg = lerpAng(net0.d, 185, reel) + thrash;
+    let c = { x: lerp(net0.c.x, feet.x, reel), y: lerp(net0.c.y, feet.y, reel) - Math.sin(Math.PI * reel) * 12 * s };
+    // net hoop: off his hip, down under the fish, then up to his waist with the fish in it
+    let H = { x: lerp(hip.x, feet.x, scoop), y: lerp(hip.y, feet.y + 7 * s, scoop) };
+    if (lift > 0) {
+      H = { x: lerp(feet.x, up.x, lift), y: lerp(feet.y + 7 * s, up.y, lift) - Math.sin(Math.PI * lift) * 10 * s };
+      c = { x: H.x + 2 * s, y: H.y + 4 * s };
+      deg = lerpAng(185, 168, lift) + thrash;
+    }
+    const tsc = lerp(sc, sc * .82, lift);
+    const m = R2(deg, BODY * tsc);
+    trout.setAttribute('transform', `translate(${c.x + m.x} ${c.y + m.y}) rotate(${deg}) scale(${tsc}) translate(${-MOUTH} 0)`);
+    troutFlip.setAttribute('transform', Math.cos(deg * Math.PI / 180) < 0 ? 'scale(1 -1)' : '');
+
+    // rod up while reeling, eased back down once the fish is in the net
+    const tip = setRod(lerp(lerp(G.rest, -68, reel), -48, lift));
+    const mouth = { x: c.x + m.x, y: c.y + m.y };
+    castLine.setAttribute('d', `M${tip.x} ${tip.y} Q${(tip.x + mouth.x) / 2} ${(tip.y + mouth.y) / 2 + lerp(6, 22, lift) * s} ${mouth.x} ${mouth.y}`);
+
+    if (t > 800) {
+      net.style.display = ''; hipNet.style.display = 'none';
+      const rx = 30 * s, ry = 7 * s, sway = reduce ? 0 : Math.sin(now / 420) * 3 * s * lift;
+      netHoop.setAttribute('cx', H.x); netHoop.setAttribute('cy', H.y); netHoop.setAttribute('rx', rx); netHoop.setAttribute('ry', ry);
+      netBag.setAttribute('d', `M${H.x - rx} ${H.y} Q${H.x - rx * .6 + sway} ${H.y + 30 * s} ${H.x + sway} ${H.y + 36 * s} Q${H.x + rx * .6 + sway} ${H.y + 30 * s} ${H.x + rx} ${H.y} Z`);
+      netHandle.setAttribute('x1', hand.x); netHandle.setAttribute('y1', hand.y);
+      netHandle.setAttribute('x2', H.x - rx); netHandle.setAttribute('y2', H.y);
+    }
+    if (!netRipple && t > 1650) {                               // splash as she comes out of the water
+      netRipple = true;
+      [0, .3].forEach(dl => { const e = document.createElementNS(NS, 'ellipse');
+        e.setAttribute('cx', feet.x); e.setAttribute('cy', feet.y + 8 * s); e.setAttribute('rx', 16 * s); e.setAttribute('ry', 4 * s);
+        e.setAttribute('class', 'rip'); e.style.animationDelay = dl + 's'; ripples.appendChild(e); });
+    }
+  }
+  function startNet(now) {
+    const sc = G.s * 1.15, a = lastD * Math.PI / 180;
+    net0 = { d: lastD, c: lastM ? { x: lastM.x - Math.cos(a) * 37 * sc, y: lastM.y - Math.sin(a) * 37 * sc } : { ...G.lnd } };
+    netT0 = now; netRipple = false; ripples.innerHTML = '';
+    svg.classList.add('netted'); svg.appendChild(trout); svg.appendChild(net);
   }
 
   function lineFrame(now) {
     now = typeof now === 'number' ? now : performance.now();
     if (!len || !castDone || casting) return;
+    if (netT0) { netFrame(now); return; }
     // keep the fly ~62% down the screen: find the point on the line at that height
     const r = river.getBoundingClientRect();
     let at = len;
@@ -808,6 +878,11 @@ footer .caps{color:var(--logo);font-weight:600}
     placeFly(pt.x, pt.y, at <= firstLen + 1 ? 0 : ang);
     fly.style.opacity = 1;
     placeTrout(at, pt, now);
+    // reeled all the way back to him while he's on screen: land the fish
+    if (hooked && now - hookTime > 1200 && at <= firstLen + 2) {
+      const fy = r.top + G.fy;
+      if (fy - 140 * G.s > 0 && fy < innerHeight) startNet(now);
+    }
   }
 
   // keep the trout chasing (surging) even when the page isn't scrolling
