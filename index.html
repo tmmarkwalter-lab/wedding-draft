@@ -196,10 +196,10 @@ nav.solid a{text-shadow:none}
 .rsvp{background:var(--navy);color:var(--cream);overflow:hidden}
 .rsvp h2{color:var(--cream)}
 .rsvp .eyebrow{color:var(--tan)}
-.rsvp-card{max-width:560px;margin:36px auto 0;background:rgba(244,238,227,.06);border:1px solid rgba(200,172,134,.4);padding:36px clamp(20px,5vw,44px);position:relative}
+.rsvp-card{max-width:620px;margin:36px auto 0;background:rgba(244,238,227,.06);border:1px solid rgba(200,172,134,.4);padding:36px clamp(20px,5vw,44px);position:relative}
 .rsvp-card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(200,172,134,.18);pointer-events:none}
 .rsvp label{display:block;font-family:var(--caps);font-size:.62rem;letter-spacing:.22em;color:var(--tan);margin:18px 0 8px}
-.rsvp input[type=text],.rsvp select,.rsvp textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(200,172,134,.6);color:var(--cream);font-family:var(--serif);font-size:1.15rem;padding:8px 2px;outline:none}
+.rsvp input[type=text],.rsvp input[type=email],.rsvp select,.rsvp textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(200,172,134,.6);color:var(--cream);font-family:var(--serif);font-size:1.15rem;padding:8px 2px;outline:none}
 .rsvp select option{color:var(--ink)}
 .rsvp input:focus,.rsvp select:focus,.rsvp textarea:focus{border-bottom-color:var(--orange)}
 .choice{display:flex;gap:12px;flex-wrap:wrap}
@@ -216,6 +216,53 @@ nav.solid a{text-shadow:none}
 .preview-badge{position:absolute;top:-12px;right:18px;background:var(--tan);color:var(--choc);font-family:var(--caps);font-size:.55rem;letter-spacing:.2em;padding:4px 10px}
 .hooked{text-align:center}
 .hooked .big{font-family:var(--script);font-size:3.4rem;line-height:1.1}
+.rsvp .deadline{text-align:center;font-style:italic;color:var(--tan);margin-bottom:6px}
+.party-hello{font-style:italic;color:var(--tan)}
+.party-hello b{font-style:normal;font-weight:500;color:var(--cream)}
+.choices{display:grid;gap:10px;margin-top:16px}
+.choices button{background:transparent;border:1px solid rgba(200,172,134,.5);color:var(--cream);font-family:var(--serif);font-size:1.1rem;padding:12px 16px;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
+.choices button:hover,.choices button:focus-visible{border-color:var(--orange);background:rgba(244,238,227,.05)}
+.invite-note{border:1px solid rgba(200,172,134,.45);padding:14px 16px;margin-top:18px;color:var(--cream);font-size:1rem;line-height:1.5}
+.invite-note b{display:block;font-family:var(--caps);font-weight:500;font-size:.6rem;letter-spacing:.22em;color:var(--tan);margin-bottom:4px}
+.guest{border-top:1px solid rgba(200,172,134,.35);padding-top:20px;margin-top:26px}
+.guest-name{font-size:1.35rem;color:var(--cream);line-height:1.3;margin-bottom:4px}
+.guest-sub{font-size:.85rem;font-style:italic;color:var(--tan);margin-top:6px}
+.ev{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(200,172,134,.22)}
+.ev-t{font-size:1.05rem;color:var(--cream);line-height:1.25}
+.ev-t small{display:block;font-size:.8rem;color:var(--tan);font-style:italic;margin-top:2px}
+.yn{display:flex;gap:6px;flex:none}
+.rsvp .yn label{margin:0;border:1px solid rgba(200,172,134,.5);padding:9px 0;width:64px;text-align:center;cursor:pointer;font-size:.6rem;letter-spacing:.2em;color:var(--cream);transition:background .2s,border-color .2s}
+.yn input{position:absolute;opacity:0;pointer-events:none}
+.rsvp .yn label:has(input:checked){background:var(--orange);border-color:var(--orange)}
+.rsvp .yn label:has(input:focus-visible){outline:2px solid var(--cream);outline-offset:2px}
+.guest .meal{display:none}.guest.wedding-yes .meal{display:block}
+.rsvp .err{color:#F2B48C;margin-top:14px;font-style:italic;font-size:1rem}
+.rsvp .err:empty{display:none}
+.btn[disabled]{opacity:.65;cursor:wait}
+.linkish{background:none;border:0;color:var(--tan);text-decoration:underline;text-underline-offset:3px;font-family:var(--serif);font-size:1rem;cursor:pointer;margin:28px 0 0 18px}
+.missing{outline:1px solid #F2B48C;outline-offset:8px}
+.confirm-extra{margin:20px auto 0;color:var(--cream);text-align:left;border:1px solid rgba(200,172,134,.4);padding:14px 16px;font-size:1rem;line-height:1.5;max-width:440px}
+.confirm-extra b{display:block;font-family:var(--caps);font-weight:500;font-size:.6rem;letter-spacing:.22em;color:var(--tan);margin-bottom:4px}
+@media (max-width:480px){
+  .ev{flex-direction:column;align-items:stretch;gap:8px}
+  .yn{width:100%}.rsvp .yn label{flex:1;width:auto}
+  .linkish{margin-left:0;display:block}
+}
+
+/* ---------- Room blocks ---------- */
+.stays-head{text-align:center;margin-top:64px}
+.stays-head h3{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(1.8rem,3.4vw,2.4rem);color:var(--choc);line-height:1.15;margin-top:6px}
+.stays-head p{max-width:620px;margin:10px auto 0;color:var(--muted);font-size:1.02rem}
+.stays{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:30px}
+.stay{background:var(--paper);border-top:3px solid var(--choc);padding:26px clamp(20px,3vw,30px) 24px;box-shadow:0 24px 50px -36px rgba(36,22,14,.55)}
+.stay h4{font-family:var(--serif);font-weight:500;font-size:1.7rem;color:var(--choc);line-height:1.15}
+.stay .where{font-style:italic;color:var(--muted);font-size:.98rem;margin:2px 0 16px}
+.stay h5{font-family:var(--caps);font-weight:500;font-size:.62rem;letter-spacing:.2em;color:var(--choc);margin:16px 0 4px}
+.stay p{font-size:.98rem;line-height:1.55}
+.stay a{color:var(--choc);text-underline-offset:3px;overflow-wrap:anywhere}
+.stay .call{display:inline-block;margin-top:8px;background:var(--choc);color:var(--cream);text-decoration:none;font-family:var(--caps);font-size:.62rem;letter-spacing:.2em;padding:10px 16px}
+.stay .mention{margin-top:12px;font-style:italic;color:var(--muted)}
+@media (max-width:760px){.stays{grid-template-columns:1fr}}
 
 /* ---------- Footer ---------- */
 footer{background:var(--cream);color:var(--logo);text-align:center;padding:70px 20px 150px;position:relative;overflow:hidden}
@@ -443,8 +490,33 @@ footer .caps{color:var(--logo);font-weight:600}
       <p class="photo-credit rv">Photo: Brian Schott / Explore Whitefish</p>
       <div class="travel-notes rv">
         <div><h5>Fly In</h5><p>Glacier Park International (FCA) is about 20 minutes from Whitefish. American flies nonstop from Dallas/Fort Worth.</p></div>
-        <div><h5>Stay</h5><p>Hotel recommendations and room blocks are coming soon.</p></div>
+        <div><h5>Stay</h5><p>We've reserved room blocks at two hotels in town. Details are below.</p></div>
         <div><h5>Wedding Day</h5><p>Shuttles run between Whitefish and the ranch, so leave the car and enjoy the night.</p></div>
+      </div>
+      <div class="stays-head rv" id="stay">
+        <div class="eyebrow caps">Room blocks</div>
+        <h3>Where to Stay</h3>
+        <p>When you book, mention the <b>Markwalter | Hattendorf Welcome Reception</b> so your room counts toward our block.</p>
+      </div>
+      <div class="stays">
+        <article class="stay rv">
+          <h4>The Lodge at Whitefish Lake</h4>
+          <div class="where">On Whitefish Lake · home of the Post Toast</div>
+          <h5>To book</h5>
+          <p>Call Group Reservations and mention the Markwalter | Hattendorf Welcome Reception.</p>
+          <a class="call" href="tel:+14068634055,2">406.863.4055, ext. 2</a>
+          <p class="mention">Please book by phone. Online reservations can't be linked to our block, even for room types outside it.</p>
+          <h5>Questions</h5>
+          <p>Ellie Thiel, Sales Coordinator<br><a href="mailto:groups@lodgeatwhitefishlake.com">groups@lodgeatwhitefishlake.com</a><br><a href="tel:+14068634013">406.863.4013</a></p>
+        </article>
+        <article class="stay rv">
+          <h4>The Firebrand</h4>
+          <div class="where">Downtown Whitefish</div>
+          <h5>To book</h5>
+          <p>Reach out to Grace Flanigan, Sales &amp; Event Administrator, and mention the Markwalter | Hattendorf Welcome Reception.</p>
+          <a class="call" href="tel:+14068631907">406.863.1907</a>
+          <p style="margin-top:12px"><a href="mailto:grace@firebrandhotel.com">grace@firebrandhotel.com</a><br>Toll-free: <a href="tel:+18448631900,1907">844.863.1900, ext. 1907</a></p>
+        </article>
       </div>
     </div>
   </section>
@@ -470,28 +542,39 @@ footer .caps{color:var(--logo);font-weight:600}
       <div class="eyebrow caps rv">Kindly reply</div>
       <h2 class="rv">Will you join us?</h2>
       <div class="rsvp-card rv">
-        <span class="preview-badge">Preview · RSVPs open soon</span>
-        <form id="rsvpform" onsubmit="return false">
+        <span class="preview-badge" id="rbadge">Preview · RSVPs open soon</span>
+        <p class="deadline" id="rdeadline" hidden></p>
+        <form id="rsvpform" novalidate onsubmit="return false">
           <div class="step show" data-step="1">
             <label for="rname">Find your invitation</label>
-            <input type="text" id="rname" placeholder="First and last name" autocomplete="off">
+            <input type="text" id="rname" placeholder="First and last name" autocomplete="name">
             <button class="btn" type="button" id="find">Find my RSVP</button>
+            <p class="err" id="err1" role="alert"></p>
+          </div>
+          <div class="step" data-step="pick">
+            <p class="party-hello">We found a few invitations with that name. Which one is yours?</p>
+            <div class="choices" id="choices"></div>
+            <p class="err" id="errpick" role="alert"></p>
+            <button class="linkish" type="button" data-back style="margin-left:0">Search again</button>
           </div>
           <div class="step" data-step="2">
-            <p style="font-style:italic;color:var(--tan)">Howdy, <span id="who"></span>! We found your invitation.</p>
-            <label>Wedding · Saturday, September 18</label>
-            <div class="choice">
-              <label><input type="radio" name="attend" value="yes" checked><span>Joyfully accepts</span></label>
-              <label><input type="radio" name="attend" value="no"><span>Regretfully declines</span></label>
+            <p class="party-hello">Howdy! We found your invitation for <b id="who"></b>.</p>
+            <div id="rinvite"></div>
+            <div id="guests"></div>
+            <div class="guest">
+              <label for="remail" style="margin-top:0">Email</label>
+              <input type="email" id="remail" maxlength="120" autocomplete="email" placeholder="For updates &amp; shuttle times">
+              <label for="rnote">Anything else we should know?</label>
+              <textarea id="rnote" rows="2" maxlength="600"></textarea>
             </div>
-            <label class="check"><input type="checkbox" checked> I'll be at the Welcome Party (Thursday)</label>
-            <label class="check"><input type="checkbox" checked> I'll be at the Post Toast (Friday)</label>
-            <button class="btn" type="button" id="send">Send RSVP</button>
+            <button class="btn" type="button" id="send">Send RSVP</button><button class="linkish" type="button" data-back>Not you? Search again</button>
+            <p class="err" id="err2" role="alert"></p>
           </div>
           <div class="step hooked" data-step="3">
-            <div class="big">You're hooked!</div>
-            <p style="color:var(--tan);margin-top:8px">We can't wait to celebrate with you in Montana.</p>
-            <p style="color:var(--tan);margin-top:14px;font-size:.9rem;font-style:italic">(This is just a preview. Nothing was sent, and RSVPs will open soon!)</p>
+            <div class="big" id="donebig">You're hooked!</div>
+            <p id="donemsg" style="color:var(--tan);margin-top:8px">We can't wait to celebrate with you in Montana.</p>
+            <div id="doneextra"></div>
+            <button class="linkish" type="button" id="edit" style="margin-left:0">Change my reply</button>
           </div>
         </form>
       </div>
@@ -943,11 +1026,173 @@ footer .caps{color:var(--logo);font-weight:600}
     }
   })();
 
-  /* ---------- RSVP preview ---------- */
-  const go = n => $$('.step').forEach(s => s.classList.toggle('show', s.dataset.step == n));
-  $('#find').addEventListener('click', () => { const v = $('#rname').value.trim(); $('#who').textContent = v ? v.split(' ')[0] : 'friend'; go(2); });
-  $('#rname').addEventListener('keydown', e => { if (e.key === 'Enter') $('#find').click(); });
-  $('#send').addEventListener('click', () => go(3));
+  /* ---------- RSVP ---------- */
+  (() => {
+    const API = 'https://script.google.com/macros/s/AKfycbwjoTKsi7430aoD1K_jDUIBEf10ussbCduzm4jpwSRUkzqzMlDUw8FPzfvj2tUcoC68/exec';   // Google Apps Script web app (rsvp-backend/Code.gs). Empty = preview mode.
+    const EVENTS = [
+      { k: 'welcome', t: 'Welcome Party', d: 'Thursday, September 16' },
+      { k: 'rehearsal', t: 'Rehearsal Dinner', d: 'Friday, September 17', invite: true },
+      { k: 'toast', t: 'The Post Toast', d: 'Friday, September 17' },
+      { k: 'wedding', t: 'The Wedding', d: 'Saturday, September 18' }
+    ];
+    const esc = v => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const go = n => {
+      $$('#rsvpform .step').forEach(s => s.classList.toggle('show', s.dataset.step == n));
+      const card = $('#rsvp .rsvp-card'), top = card.getBoundingClientRect().top;
+      if (n !== 1 && (top < 0 || top > innerHeight * .5)) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    const OFFLINE = { ok: false, error: 'RSVPs open soon. Check back shortly!' };
+    const call = async (params, post) => {
+      if (!API) return OFFLINE;
+      const r = post
+        ? await fetch(API, { method: 'POST', body: JSON.stringify(params) })
+        : await fetch(API + '?' + new URLSearchParams(params));
+      return r.json();
+    };
+    const NET = "We couldn't reach the RSVP service. Check your connection and try again.";
+    const busy = (btn, on, label) => { btn.disabled = on; btn.textContent = label; };
+    let inv = null;
+
+    if (API) call({ action: 'status' }).then(s => {
+      if (!s.ok) return;
+      if (s.open) $('#rbadge').hidden = true;
+      if (s.deadline) { $('#rdeadline').textContent = 'Kindly reply by ' + s.deadline; $('#rdeadline').hidden = false; }
+    }).catch(() => {});
+
+    const events = () => EVENTS.filter(e => !e.invite || inv.rehearsal);
+    const evDate = e => (e.k === 'rehearsal' && inv.rehearsalInfo && inv.rehearsalInfo.when) || e.d;
+
+    function render(i) {
+      inv = i;
+      $('#who').textContent = i.label;
+      const ri = i.rehearsalInfo || {};
+      $('#rinvite').innerHTML = i.rehearsal
+        ? `<div class="invite-note"><b>You're invited to the Rehearsal Dinner</b>${esc([ri.when || 'Friday, September 17', ri.where].filter(Boolean).join(' · '))}${ri.details ? '<br>' + esc(ri.details) : ''}</div>`
+        : '';
+      const prev = i.previous || { guests: [] };
+      $('#guests').innerHTML = i.guests.map((g, gi) => {
+        const p = prev.guests[gi] || {};
+        const head = g.fixed
+          ? `<div class="guest-name">${esc(g.name)}</div>`
+          : `<label for="gn${gi}" style="margin-top:0">Guest ${gi + 1}</label>
+             <input type="text" id="gn${gi}" data-name maxlength="80" autocomplete="off" placeholder="Guest's first and last name" value="${esc(p.name && p.name !== '(no guest)' ? p.name : '')}">
+             <div class="guest-sub">Leave blank if you won't be bringing a guest.</div>`;
+        const rows = events().map(e => `
+          <div class="ev"><div class="ev-t">${esc(e.t)}<small>${esc(evDate(e))}</small></div>
+            <div class="yn" role="radiogroup" aria-label="${esc(e.t)}">${['yes', 'no'].map(v =>
+              `<label><input type="radio" name="g${gi}-${e.k}" value="${v}"${p[e.k] === v ? ' checked' : ''}><span>${v === 'yes' ? 'Yes' : 'No'}</span></label>`).join('')}</div>
+          </div>`).join('');
+        const meal = i.meals.length
+          ? `<div class="meal"><label for="gm${gi}">Dinner selection</label><select id="gm${gi}" data-meal><option value="">Choose one</option>${
+              i.meals.map(m => `<option value="${esc(m)}"${p.meal === m ? ' selected' : ''}>${esc(m)}</option>`).join('')}</select></div>`
+          : '';
+        return `<div class="guest${p.wedding === 'yes' ? ' wedding-yes' : ''}" data-g="${gi}">${head}${rows}${meal}
+          <label for="gd${gi}">Dietary restrictions</label>
+          <input type="text" id="gd${gi}" data-diet maxlength="300" placeholder="Allergies or restrictions (optional)" value="${esc(p.diet)}"></div>`;
+      }).join('');
+      $$('#guests .guest').forEach(el => el.addEventListener('change', e => {
+        if (e.target.name && e.target.name.endsWith('-wedding')) el.classList.toggle('wedding-yes', e.target.value === 'yes');
+      }));
+      $('#remail').value = prev.email || '';
+      $('#rnote').value = prev.note || '';
+      $('#err2').textContent = '';
+      go(2);
+    }
+
+    function collect() {
+      const guests = [];
+      let bad = null;
+      const flag = (el, msg) => { if (!bad) bad = [el, msg]; };
+      $$('#guests .guest').forEach((el, gi) => {
+        const g = inv.guests[gi], x = {};
+        if (!g.fixed) x.name = el.querySelector('[data-name]').value.trim();
+        const who = g.fixed ? g.name : x.name;
+        events().forEach(e => { const c = el.querySelector(`input[name="g${gi}-${e.k}"]:checked`); x[e.k] = c ? c.value : ''; });
+        if (!g.fixed && !x.name && events().some(e => x[e.k] === 'yes')) flag(el, `Please add a name for guest ${gi + 1}.`);
+        if (who && events().some(e => !x[e.k])) flag(el, `Please answer Yes or No for each event for ${who}.`);
+        const m = el.querySelector('[data-meal]');
+        x.meal = m ? m.value : '';
+        if (who && x.wedding === 'yes' && m && !x.meal) flag(el, `Please choose a dinner for ${who}.`);
+        x.diet = el.querySelector('[data-diet]').value.trim();
+        guests.push(x);
+      });
+      return { guests, bad };
+    }
+
+    function done(r, guests) {
+      const coming = guests.some(g => events().some(e => g[e.k] === 'yes'));
+      $('#donebig').textContent = coming ? "You're hooked!" : "We'll miss you!";
+      $('#donemsg').textContent = coming ? "Thank you! We can't wait to celebrate with you in Montana." : 'Thank you for letting us know. You will be with us in spirit.';
+      let extra = '';
+      if (r.welcomeAddress) extra += `<div class="confirm-extra"><b>Welcome Party · Thursday, 7 – 10 PM</b>Hattendorf Residence<br>${esc(r.welcomeAddress)}</div>`;
+      const ri = r.rehearsalInfo;
+      if (ri && guests.some(g => g.rehearsal === 'yes') && (ri.where || ri.details))
+        extra += `<div class="confirm-extra"><b>Rehearsal Dinner</b>${esc([ri.when, ri.where].filter(Boolean).join(' · '))}${ri.details ? '<br>' + esc(ri.details) : ''}</div>`;
+      $('#doneextra').innerHTML = extra;
+      go(3);
+    }
+
+    async function find() {
+      const q = $('#rname').value.trim(), btn = $('#find');
+      $('#err1').textContent = '';
+      if (q.split(/\s+/).filter(Boolean).length < 2) { $('#err1').textContent = 'Please enter your first and last name.'; return; }
+      busy(btn, true, 'Searching…');
+      try {
+        const r = await call({ action: 'find', q });
+        if (!r.ok) { $('#err1').textContent = r.error; return; }
+        if (r.invitation) { render(r.invitation); return; }
+        $('#errpick').textContent = '';
+        $('#choices').innerHTML = r.choices.map((c, i) => `<button type="button" data-i="${i}">${esc(c.label)}</button>`).join('');
+        $$('#choices button').forEach(b => b.addEventListener('click', () => openChoice(r.choices[+b.dataset.i], b)));
+        go('pick');
+      } catch (e) { $('#err1').textContent = NET; }
+      finally { busy(btn, false, 'Find my RSVP'); }
+    }
+
+    async function openChoice(c, btn) {
+      const label = btn.textContent;
+      busy(btn, true, 'Opening…');
+      try {
+        const r = await call({ action: 'get', id: c.id, sig: c.sig });
+        if (r.ok) render(r.invitation); else $('#errpick').textContent = r.error;
+      } catch (e) { $('#errpick').textContent = NET; }
+      finally { busy(btn, false, label); }
+    }
+
+    $('#find').addEventListener('click', find);
+    $('#rname').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); find(); } });
+    $$('#rsvpform [data-back]').forEach(b => b.addEventListener('click', () => { $('#rname').focus({ preventScroll: true }); go(1); }));
+
+    $('#send').addEventListener('click', async () => {
+      const btn = $('#send');
+      $$('#guests .missing').forEach(el => el.classList.remove('missing'));
+      $('#err2').textContent = '';
+      const { guests, bad } = collect();
+      if (bad) {
+        bad[0].classList.add('missing');
+        $('#err2').textContent = bad[1];
+        bad[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      if (!inv.open) { $('#err2').textContent = "RSVPs aren't open quite yet. Check back soon!"; return; }
+      busy(btn, true, 'Sending…');
+      try {
+        const r = await call({ action: 'submit', id: inv.id, sig: inv.sig, guests, email: $('#remail').value.trim(), note: $('#rnote').value.trim() }, true);
+        if (r.ok) done(r, guests); else $('#err2').textContent = r.error;
+      } catch (e) { $('#err2').textContent = NET; }
+      finally { busy(btn, false, 'Send RSVP'); }
+    });
+
+    $('#edit').addEventListener('click', async () => {
+      const btn = $('#edit');
+      busy(btn, true, 'Loading…');
+      try {
+        const r = await call({ action: 'get', id: inv.id, sig: inv.sig });
+        if (r.ok) render(r.invitation); else go(1);
+      } catch (e) { go(2); }
+      finally { busy(btn, false, 'Change my reply'); }
+    });
+  })();
 
   /* ---------- loop ---------- */
   let ticking = false;
