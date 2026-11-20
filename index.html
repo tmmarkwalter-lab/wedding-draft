@@ -513,9 +513,11 @@ footer .caps{color:var(--logo);font-weight:600}
           <h4>The Firebrand</h4>
           <div class="where">Downtown Whitefish</div>
           <h5>To book</h5>
-          <p>Reach out to Grace Flanigan, Sales &amp; Event Administrator, and mention the Markwalter | Hattendorf Welcome Reception.</p>
-          <a class="call" href="tel:+14068631907">406.863.1907</a>
-          <p style="margin-top:12px"><a href="mailto:grace@firebrandhotel.com">grace@firebrandhotel.com</a><br>Toll-free: <a href="tel:+18448631900,1907">844.863.1900, ext. 1907</a></p>
+          <p>Call and mention the Markwalter | Hattendorf Welcome Reception.</p>
+          <a class="call" href="tel:+18448631900,1907">844.863.1900, ext. 1907</a>
+          <p class="mention">Toll-free line. Ask for Grace Flanigan.</p>
+          <h5>Questions</h5>
+          <p>Grace Flanigan, Sales &amp; Event Administrator<br><a href="mailto:grace@firebrandhotel.com">grace@firebrandhotel.com</a><br><a href="tel:+14068631907">406.863.1907</a></p>
         </article>
       </div>
     </div>
@@ -564,8 +566,6 @@ footer .caps{color:var(--logo);font-weight:600}
             <div class="guest">
               <label for="remail" style="margin-top:0">Email</label>
               <input type="email" id="remail" maxlength="120" autocomplete="email" placeholder="We&rsquo;ll email your confirmation here">
-              <label for="rnote">Anything else we should know?</label>
-              <textarea id="rnote" rows="2" maxlength="600"></textarea>
             </div>
             <button class="btn" type="button" id="send">Send RSVP</button><button class="linkish" type="button" data-back>Not you? Search again</button>
             <p class="err" id="err2" role="alert"></p>
@@ -1094,7 +1094,6 @@ footer .caps{color:var(--logo);font-weight:600}
         if (e.target.name && e.target.name.endsWith('-wedding')) el.classList.toggle('wedding-yes', e.target.value === 'yes');
       }));
       $('#remail').value = prev.email || '';
-      $('#rnote').value = prev.note || '';
       $('#err2').textContent = '';
       go(2);
     }
@@ -1177,7 +1176,7 @@ footer .caps{color:var(--logo);font-weight:600}
       if (!inv.open) { $('#err2').textContent = "RSVPs aren't open quite yet. Check back soon!"; return; }
       busy(btn, true, 'Sending…');
       try {
-        const r = await call({ action: 'submit', id: inv.id, sig: inv.sig, guests, email: $('#remail').value.trim(), note: $('#rnote').value.trim() }, true);
+        const r = await call({ action: 'submit', id: inv.id, sig: inv.sig, guests, email: $('#remail').value.trim() }, true);
         if (r.ok) done(r, guests); else $('#err2').textContent = r.error;
       } catch (e) { $('#err2').textContent = NET; }
       finally { busy(btn, false, 'Send RSVP'); }
